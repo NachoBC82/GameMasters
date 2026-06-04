@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://0twm0427ugep" path="res://assets/Background/bar.png" id="1_14l7y"]
 [ext_resource type="PackedScene" uid="uid://c5yx7a81dyts" path="res://Nodos/lex.tscn" id="2_bf2u5"]
+[ext_resource type="PackedScene" uid="uid://bobr7a6dpany5" path="res://Nodos/dialog_box.tscn" id="3_acg0n"]
 
 [node name="Node2D" type="Node2D" unique_id=275355892]
 
@@ -35,12 +36,4 @@ grow_vertical = 0
 position = Vector2(0, 10)
 scale = Vector2(2, 2)
 
-[node name="DialogBox" type="PanelContainer" parent="CanvasLayer2" unique_id=704588961]
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -65.0
-offset_bottom = 85.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="Dialog" parent="CanvasLayer2" unique_id=1951190532 instance=ExtResource("3_acg0n")]
