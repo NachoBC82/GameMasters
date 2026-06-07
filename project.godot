@@ -61,6 +61,10 @@ layout/style_list=[]
 layout/default_style="Default"
 glossary/default_case_sensitive=true
 
+[dotnet]
+
+project/assembly_name="ScrumMaster"
+
 [editor_plugins]
 
 enabled=PackedStringArray()
