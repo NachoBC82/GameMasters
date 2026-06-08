@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://bobr7a6dpany5"]
+
+[ext_resource type="Texture2D" uid="uid://d3h2cxcvjp3jb" path="res://assets/UI/flecha.png" id="1_1xgx1"]
+[ext_resource type="Theme" uid="uid://d01gid4vqxg4d" path="res://Theme/Dialogbox.tres" id="1_lm2ap"]
+[ext_resource type="Script" uid="uid://cyjs18hkfvfju" path="res://Scripts/dialog_box.gd" id="2_j168h"]
+
+[sub_resource type="SystemFont" id="SystemFont_yi17m"]
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_4dd0v"]
+font = SubResource("SystemFont_yi17m")
+font_size = 24
+
+[node name="Dialog" type="Control" unique_id=1951190532]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_lm2ap")
+script = ExtResource("2_j168h")
+
+[node name="DialogBox" type="PanelContainer" parent="." unique_id=1649610580]
+custom_minimum_size = Vector2(127, 188)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -188.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DialogLine" type="RichTextLabel" parent="DialogBox" unique_id=1274778558]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Esto es una linea del dialogo que admite formato"
+
+[node name="SpeakerBox" type="Control" parent="." unique_id=978718491]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -238.0
+offset_right = 199.0
+offset_bottom = -188.0
+grow_vertical = 0
+
+[node name="Polygon2D" type="Polygon2D" parent="SpeakerBox" unique_id=95896167]
+position = Vector2(1, 2)
+color = Color(0.3764706, 0.09019608, 0.1254902, 0.4862745)
+polygon = PackedVector2Array(0, 0, 184.00002, 0, 199.99998, 48, 0, 48)
+
+[node name="DialogSpeaker" type="Label" parent="SpeakerBox" unique_id=334601493]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.5
+offset_top = -11.5
+offset_right = 23.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Name"
+label_settings = SubResource("LabelSettings_4dd0v")
+
+[node name="Control" type="Control" parent="." unique_id=1970200427]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Polygon2D" type="Polygon2D" parent="Control" unique_id=1977586563]
+position = Vector2(-100, -103)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_1xgx1")
+polygon = PackedVector2Array(110, 60, 120, 62, 194, 120, 194, 140, 176, 152, 122, 192, 94, 198, 88, 178, 88, 70)
+uv = PackedVector2Array(104, 64, 112, 62, 119.99999, 64, 176, 104, 184, 112, 192, 120, 192, 136, 184, 143.99998, 176, 152, 144.00002, 176, 120.00001, 192, 104, 192, 88.00001, 176, 88, 72)
