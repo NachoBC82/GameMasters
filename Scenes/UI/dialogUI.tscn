@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d3h2cxcvjp3jb" path="res://assets/UI/flecha.png" id="1_1xgx1"]
 [ext_resource type="Theme" uid="uid://d01gid4vqxg4d" path="res://Theme/Dialogbox.tres" id="1_lm2ap"]
 [ext_resource type="Script" uid="uid://cyjs18hkfvfju" path="res://Scripts/dialog_box.gd" id="2_j168h"]
+[ext_resource type="Script" uid="uid://4vty6t06qfvi" path="res://Scripts/text_blip_sound.gd" id="3_f504t"]
 
 [sub_resource type="SystemFont" id="SystemFont_yi17m"]
 subpixel_positioning = 0
@@ -11,7 +12,7 @@ subpixel_positioning = 0
 font = SubResource("SystemFont_yi17m")
 font_size = 24
 
-[node name="Dialog" type="Control" unique_id=1951190532]
+[node name="DialogUI" type="Control" unique_id=1951190532]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,6 +21,20 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_lm2ap")
 script = ExtResource("2_j168h")
+
+[node name="SentencePauseTimer" type="Timer" parent="." unique_id=404742893]
+unique_name_in_owner = true
+wait_time = 0.35
+one_shot = true
+
+[node name="TextBlipTimer" type="Timer" parent="." unique_id=457279635]
+unique_name_in_owner = true
+wait_time = 0.09
+
+[node name="TextBlipSound" type="AudioStreamPlayer2D" parent="." unique_id=99156771]
+unique_name_in_owner = true
+volume_db = 10.692
+script = ExtResource("3_f504t")
 
 [node name="DialogBox" type="PanelContainer" parent="." unique_id=1649610580]
 custom_minimum_size = Vector2(127, 188)

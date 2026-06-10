@@ -2,6 +2,8 @@ extends Node2D
 
 @onready var character_sprite = %CharacterSprite
 @onready var dialog_ui = %Dialog
+@onready var next_sentence_sound = %NextSentenceSound
+
 var dialog_index : int
 
 const dialog_lines : Array[String] = [

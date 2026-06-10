@@ -3,10 +3,13 @@
 [ext_resource type="Script" uid="uid://crk7qycrhae41" path="res://Scripts/main_scene.gd" id="1_7rqgy"]
 [ext_resource type="Texture2D" uid="uid://0twm0427ugep" path="res://assets/Background/bar.png" id="1_nhkr4"]
 [ext_resource type="PackedScene" uid="uid://c5yx7a81dyts" path="res://Scenes/Characters/CharacterSprite.tscn" id="2_7rqgy"]
-[ext_resource type="PackedScene" uid="uid://bobr7a6dpany5" path="res://Scenes/UI/dialog_box.tscn" id="3_qxria"]
+[ext_resource type="PackedScene" uid="uid://bobr7a6dpany5" path="res://Scenes/UI/dialogUI.tscn" id="3_qxria"]
 
 [node name="MainScene" type="Node2D" unique_id=275355892]
 script = ExtResource("1_7rqgy")
+
+[node name="NextSentenceSound" type="AudioStreamPlayer" parent="." unique_id=473033994]
+unique_name_in_owner = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=483243069]
 layer = -1

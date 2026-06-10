@@ -15,12 +15,12 @@ const CHARACTER_DETAILS : Dictionary = {
 	},
 	Name.AGENTE377: {
 		"name": "Agente377",
-		"gender":"AI",
+		"gender":"ai",
 		"Sprite2D": preload("res://assets/Sprite/Agente337.png"),
 	},
 	Name.POLICIA: {
 		"name": "Policia",
-		"gender":"Male",
+		"gender":"male",
 		"Sprite2D": preload("res://assets/Sprite/Policia.png"),
 	}	
 }
