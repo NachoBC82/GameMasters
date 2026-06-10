@@ -16,12 +16,15 @@ func _process(delta: float):
 		if dialog_line.visible_ratio < 1:
 			dialog_line.visible_ratio += (1.0/dialog_line.text.length()) * (Animation_speed * delta)
 		else:
-			animate_text = false 
+			animate_text = false
 
-func change_line(speaker:String, line: String):
-	speaker_name.text = speaker
+func change_line(speaker:Character.Name, line: String):
+	speaker_name.text = Character.CHARACTER_DETAILS[speaker]["name"]
 	current_visible_characters = 0
 	
 	dialog_line.text = line
 	dialog_line.visible_characters = 0
 	animate_text = true
+	
+func skip_text_animation():
+	dialog_line.visible_ratio = 1
