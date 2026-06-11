@@ -1,0 +1,9 @@
+[
+	{"speaker": "Lex", "text": "Otro dia mas, otro caso mas. Por si fuera poco hoy toca conocer a mi nuevo compañero."},
+	{"speaker": "Lex","text": "Encima todos están obsesionados con esas tecnologias inutiles."},
+	{"speaker": "Policia","text": "Buenas Lex, la victima esta por aqui. Tu nuevo compañero ya la esta observando."},
+	{"goto":"ver_escena"},
+	{"speaker": "Lex", "text": "Mi nuevo compañero? Llevame con el"},
+	{"anchor":"ver_escena"},
+	{"speaker": "Lex", "text": "Primero ire a ver la escena, luego saludo al nuevo"}
+]

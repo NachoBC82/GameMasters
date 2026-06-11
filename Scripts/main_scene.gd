@@ -6,13 +6,11 @@ extends Node2D
 
 var dialog_index : int
 
-const dialog_lines : Array[String] = [
-	"Lex: Otro dia mas, otro caso mas. Por si fuera poco hoy toca conocer a mi nuevo compañero.",
-	"Lex: Encima todos están obsesionados con esas tecnologias inutiles.",
-	"Policia: Buenas Lex, la víctima está por aqui. Tu nuevo compañero ya la esta observando."
-]
+var dialog_lines : Array = []
 
 func _ready() -> void:
+	# load dialog
+	dialog_lines = load_dialog("res://resources/story/prototype.json")
 	# Process firts line
 	dialog_index = 0
 	process_current_line()
@@ -29,19 +27,55 @@ func _input(event):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-	
-func parse_line(line: String):
-	var line_info = line.split(":")
-	assert(len(line_info) >= 2)
-	return {
-		"speaker": line_info[0],
-		"dialog_line": line_info[1]
-	}
 
 func process_current_line():
 	var line = dialog_lines[dialog_index]
-	var line_info = parse_line(line)
-	var character_name = Character.get_enum_from_string(line_info["speaker"])
+	# Check if is goto command
+	if line.has("goto"):
+		dialog_index = get_anchor_pos(line["goto"])
+		process_current_line()
+		return
 	
-	dialog_ui.change_line(character_name,line_info["dialog_line"])
+	# Check if is a anchor
+	if line.has("anchor"):
+		dialog_index += 1 
+		process_current_line()
+		return
+		
+	# Reading line of dialog
+	var character_name = Character.get_enum_from_string(line["speaker"])
+	dialog_ui.change_line(character_name,line["text"])
 	character_sprite.change_character(character_name)
+
+func get_anchor_pos(anchor: String):
+	# Find the anchor entry with matching name
+	for i in range(dialog_lines.size()):
+		if dialog_lines[i].has("anchor") and dialog_lines[i]["anchor"] == anchor:
+			return i
+	
+	# Anchor was not found
+	printerr("Error: Could not find anchor "+anchor)
+	return null
+
+func load_dialog(file_path):
+	# Check file exist
+	if not FileAccess.file_exists(file_path):
+		printerr("Error: file does not exist ", file_path)
+		return null
+	
+	# Open file
+	var file = FileAccess.open(file_path, FileAccess.READ)
+	if file == null:
+		printerr("Error: Failed to open file ", file_path)
+		return null
+	
+	# Read content
+	var content = file.get_as_text()
+	
+	# Parse json
+	var json_content = JSON.parse_string(content)
+	if json_content == null:
+		printerr("Error: Failed to parse JSON from file ", file_path)
+		return null
+	
+	return json_content

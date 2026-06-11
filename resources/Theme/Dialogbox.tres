@@ -1,0 +1,17 @@
+[gd_resource type="Theme" format=3 uid="uid://d01gid4vqxg4d"]
+
+[ext_resource type="FontFile" uid="uid://dt0kvv1fnp7cr" path="res://resources/Fonts/SuperTechnology.ttf" id="1_5nrnn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s35yy"]
+content_margin_left = 50.0
+content_margin_top = 10.0
+content_margin_right = 90.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 0.39215687)
+border_width_top = 1
+border_color = Color(0.37587473, 0.08863222, 0.1252572, 1)
+
+[resource]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_s35yy")
+RichTextLabel/font_sizes/normal_font_size = 40
+RichTextLabel/fonts/normal_font = ExtResource("1_5nrnn")
