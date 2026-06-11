@@ -37,15 +37,19 @@ func process_current_line():
 		return
 	
 	# Check if is a anchor
-	if line.has("anchor"):
+	elif line.has("anchor"):
 		dialog_index += 1 
 		process_current_line()
 		return
 		
+	# Check if it is a choice
+	elif line.has("choices"):
+		pass
 	# Reading line of dialog
-	var character_name = Character.get_enum_from_string(line["speaker"])
-	dialog_ui.change_line(character_name,line["text"])
-	character_sprite.change_character(character_name)
+	else:
+		var character_name = Character.get_enum_from_string(line["speaker"])
+		dialog_ui.change_line(character_name,line["text"])
+		character_sprite.change_character(character_name)
 
 func get_anchor_pos(anchor: String):
 	# Find the anchor entry with matching name
