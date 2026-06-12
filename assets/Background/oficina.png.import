@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4r7ypmu2svlu"
-path="res://.godot/imported/48.png-3febe5ec64f10070b45ec5ded70bc399.ctex"
+uid="uid://4vxio3tgnqfa"
+path="res://.godot/imported/oficina.png-b7de537ca15d323b79823045825c9a8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cyberpunk_Character_asset/48.png"
-dest_files=["res://.godot/imported/48.png-3febe5ec64f10070b45ec5ded70bc399.ctex"]
+source_file="res://assets/Background/oficina.png"
+dest_files=["res://.godot/imported/oficina.png-b7de537ca15d323b79823045825c9a8b.ctex"]
 
 [params]
 

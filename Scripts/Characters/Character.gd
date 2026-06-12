@@ -4,7 +4,8 @@ extends Node
 enum Name {
 	LEX,
 	AGENTE377,
-	POLICIA
+	POLICIA,
+	MCNAMARA
 }
 
 const CHARACTER_DETAILS : Dictionary = {
@@ -22,7 +23,12 @@ const CHARACTER_DETAILS : Dictionary = {
 		"name": "Policia",
 		"gender":"male",
 		"Sprite2D": preload("res://assets/Sprite/Policia.png"),
-	}	
+	},
+	Name.MCNAMARA: {
+		"name": "McNamara",
+		"gender":"female",
+		"Sprite2D": preload("res://assets/Sprite/Mcnamara.png"),
+	}
 }
 
 static func get_enum_from_string(string_value: String) -> int:

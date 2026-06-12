@@ -3,6 +3,7 @@ extends Node2D
 @onready var character_sprite = %CharacterSprite
 @onready var dialog_ui = %Dialog
 @onready var next_sentence_sound = %NextSentenceSound
+@onready var background = %Background
 
 var dialog_index : int
 var dialog_lines : Array = []
@@ -49,6 +50,14 @@ func process_current_line():
 	# Check if it is a choice
 	elif line.has("choices"):
 		dialog_ui.display_choices(line["choices"])
+	
+	elif line.has("location"):
+		var background_file = "res://assets/Background/" + line["location"] + ".png"
+		background.texture = load(background_file)
+		dialog_index += 1
+		process_current_line()
+		return
+	
 	# Reading line of dialog
 	else:
 		var character_name = Character.get_enum_from_string(line["speaker"])

@@ -3,7 +3,7 @@ extends AudioStreamPlayer2D
 const voice_sounds : Dictionary = {
 	"lex" : preload('res://assets/Sounds/lex.wav'),
 	"male" : preload('res://assets/Sounds/man.wav'),
-	"woman" : preload('res://assets/Sounds/woman.wav'),
+	"female" : preload('res://assets/Sounds/woman.wav'),
 	"ai" : preload('res://assets/Sounds/ai.wav'),
 }
 
