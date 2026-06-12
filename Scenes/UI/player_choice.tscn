@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bfu567encl443"]
+
+[ext_resource type="Theme" uid="uid://d01gid4vqxg4d" path="res://resources/Theme/Dialogbox.tres" id="1_yev0m"]
+
+[node name="Button" type="Button" unique_id=1015876218]
+custom_minimum_size = Vector2(750, 50)
+theme = ExtResource("1_yev0m")
+text = "This is the first choice"

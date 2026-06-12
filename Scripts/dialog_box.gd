@@ -1,7 +1,13 @@
 extends Control
 
+signal choice_selected
+
+# Preload Choice Button
+const ChoiceButtonScene = preload("res://Scenes/UI/player_choice.tscn")
+
 @onready var dialog_line = %DialogLine
 @onready var speaker_name = %DialogSpeaker
+@onready var choice_list = %ChoiceList
 @onready var text_blip_sound = %TextBlipSound
 @onready var text_blip_timer = %TextBlipTimer
 @onready var sentence_pause_timer = %SentencePauseTimer
@@ -15,6 +21,9 @@ var current_character_details : Dictionary
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# Hide elements
+	choice_list.hide()
+	
 	# Connect signals
 	text_blip_timer.timeout.connect(_on_text_blip_timeout)
 	sentence_pause_timer.timeout.connect(_on_sentence_pause_timer)
@@ -45,6 +54,19 @@ func change_line(speaker:Character.Name, line: String):
 	animate_text = true
 	text_blip_timer.start()
 	
+func display_choices(choices: Array):
+	# Limpiamos las opciones
+	for child in choice_list.get_children():
+		child.queue_free()
+	# Por cada opción, instanciamos una escena de botón y la añadimos
+	for choice in choices:
+		var choice_button = ChoiceButtonScene.instantiate()
+		choice_button.text = choice["text"]
+		choice_button.pressed.connect(_on_choice_button_pressed.bind(choice["goto"]))
+		choice_list.add_child(choice_button)
+		
+	choice_list.show()
+	
 func skip_text_animation():
 	dialog_line.visible_ratio = 1
 	
@@ -53,3 +75,7 @@ func _on_text_blip_timeout():
 	
 func _on_sentence_pause_timer():
 	text_blip_timer.start()
+	
+func _on_choice_button_pressed(anchor: String):
+	choice_selected.emit(anchor)
+	choice_list.hide()

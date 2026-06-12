@@ -4,8 +4,8 @@
 	{"speaker": "Policia","text": "Buenas Lex, la victima esta por aqui. Tu nuevo compañero ya la esta observando."},
 	{ "choices": 
 		[
-			{"text": "First choice"},
-			{"text": "Second choice"}
+			{"text": "Primero deberia ver al nuevo","goto":"ver_compañero"},
+			{"text": "Primero vere la escena, es prioritario", "goto":"ver_escena"}
 		]
 	},
 	{"anchor":"ver_compañero"},
@@ -14,5 +14,6 @@
 	{"anchor":"ver_escena"},
 	{"speaker": "Lex", "text": "Primero ire a ver la escena, luego saludo al nuevo"},
 	{"goto":"visto_escena"},
-	{"anchor":"visto_escena"}
+	{"anchor":"visto_escena"},
+	{"speaker": "Agente377", "text": "Buenas agente Lex"},
 ]

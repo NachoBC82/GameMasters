@@ -2,6 +2,23 @@
 
 [ext_resource type="FontFile" uid="uid://dt0kvv1fnp7cr" path="res://resources/Fonts/SuperTechnology.ttf" id="1_5nrnn"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gy7w6"]
+bg_color = Color(0.90588236, 0.8117647, 0.58431375, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.90588236, 0.8117647, 0.21176471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eia1c"]
+bg_color = Color(0.90588236, 0.8117647, 0.58431375, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nacy2"]
+bg_color = Color(0.90612113, 0.81366163, 0.58569264, 0.34117648)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k7qop"]
+bg_color = Color(0.90588236, 0.8117647, 0.58431375, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s35yy"]
 content_margin_left = 50.0
 content_margin_top = 10.0
@@ -12,6 +29,18 @@ border_width_top = 1
 border_color = Color(0.37587473, 0.08863222, 0.1252572, 1)
 
 [resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 35
+Button/fonts/font = ExtResource("1_5nrnn")
+Button/styles/Stylebox = null
+Button/styles/focus = SubResource("StyleBoxFlat_gy7w6")
+Button/styles/hover = SubResource("StyleBoxFlat_eia1c")
+Button/styles/normal = SubResource("StyleBoxFlat_nacy2")
+Button/styles/pressed = SubResource("StyleBoxFlat_k7qop")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_s35yy")
 RichTextLabel/font_sizes/normal_font_size = 40
 RichTextLabel/fonts/normal_font = ExtResource("1_5nrnn")

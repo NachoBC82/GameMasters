@@ -4,6 +4,7 @@
 [ext_resource type="Theme" uid="uid://d01gid4vqxg4d" path="res://resources/Theme/Dialogbox.tres" id="1_lm2ap"]
 [ext_resource type="Script" uid="uid://cyjs18hkfvfju" path="res://Scripts/dialog_box.gd" id="2_j168h"]
 [ext_resource type="Script" uid="uid://4vty6t06qfvi" path="res://Scripts/text_blip_sound.gd" id="3_f504t"]
+[ext_resource type="PackedScene" uid="uid://bfu567encl443" path="res://Scenes/UI/player_choice.tscn" id="5_n4sxb"]
 
 [sub_resource type="SystemFont" id="SystemFont_yi17m"]
 subpixel_positioning = 0
@@ -104,3 +105,20 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_1xgx1")
 polygon = PackedVector2Array(110, 60, 120, 62, 194, 120, 194, 140, 176, 152, 122, 192, 94, 198, 88, 178, 88, 70)
 uv = PackedVector2Array(104, 64, 112, 62, 119.99999, 64, 176, 104, 184, 112, 192, 120, 192, 136, 184, 143.99998, 176, 152, 144.00002, 176, 120.00001, 192, 104, 192, 88.00001, 176, 88, 72)
+
+[node name="ChoiceContainer" type="CenterContainer" parent="." unique_id=1827948861]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChoiceList" type="VBoxContainer" parent="ChoiceContainer" unique_id=1592604851]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Button" parent="ChoiceContainer/ChoiceList" unique_id=1015876218 instance=ExtResource("5_n4sxb")]
+visible = false
+layout_mode = 2

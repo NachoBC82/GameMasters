@@ -5,10 +5,11 @@ extends Node2D
 @onready var next_sentence_sound = %NextSentenceSound
 
 var dialog_index : int
-
 var dialog_lines : Array = []
 
 func _ready() -> void:
+	# Connect signals
+	dialog_ui.choice_selected.connect(_on_choice_selected)
 	# load dialog
 	dialog_lines = load_dialog("res://resources/story/prototype.json")
 	# Process firts line
@@ -16,7 +17,9 @@ func _ready() -> void:
 	process_current_line()
 
 func _input(event):
-	if event.is_action_pressed("next_line"):
+	var line = dialog_lines[dialog_index]
+	var has_choices = line.has("choices")
+	if event.is_action_pressed("next_line") and not has_choices:
 		if dialog_ui.animate_text:
 			dialog_ui.skip_text_animation()
 		else:
@@ -39,12 +42,13 @@ func process_current_line():
 	# Check if is a anchor
 	elif line.has("anchor"):
 		dialog_index += 1 
-		process_current_line()
+		if dialog_index < len(dialog_lines):
+			process_current_line()
 		return
 		
 	# Check if it is a choice
 	elif line.has("choices"):
-		pass
+		dialog_ui.display_choices(line["choices"])
 	# Reading line of dialog
 	else:
 		var character_name = Character.get_enum_from_string(line["speaker"])
@@ -83,3 +87,7 @@ func load_dialog(file_path):
 		return null
 	
 	return json_content
+	
+func _on_choice_selected(anchor: String):
+	dialog_index = get_anchor_pos(anchor)
+	process_current_line()
