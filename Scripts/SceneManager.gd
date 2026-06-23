@@ -1,5 +1,9 @@
 extends Node2D
 
+# Signals
+signal transition_out_completed
+signal transition_in_completed
+
 # Black ColorRect for transitions
 var transition_layer: CanvasLayer
 var transitions_rect: ColorRect
@@ -46,3 +50,16 @@ func _fade_out():
 	
 	var tween = create_tween()
 	tween.tween_property(transitions_rect, "modulate.a", 1.0, transition_time)
+	tween.tween_callback(func(): transition_out_completed.emit()	)
+	
+func _fade_in():
+	transitions_rect.position = Vector2.ZERO
+	transitions_rect.modulate.a = 0
+	transitions_rect.z_index = 999
+	transitions_rect.visible = true
+	
+	var tween = create_tween()
+	tween.tween_property(transitions_rect, "modulate.a", 0.0, transition_time)
+	tween.tween_callback(func():
+		transitions_rect.visible = false
+		transition_in_completed.emit()	)
