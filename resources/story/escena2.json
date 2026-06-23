@@ -1,5 +1,6 @@
 [
     {"location":"oficina"},
-    {"McNamara":"Lex eres un desastre y este caso te queda grande"},
-    {"McNamara":"Agente377 tu eres un genio, pero incapaz de entender a nadie. Asi que os toca trabajar juntos"}
+	{"speaker": "McNamara", "text": "Lex eres un desastre y este caso te queda grande"},
+	{"speaker": "McNamara", "text": "Agente377 tu eres un genio, pero incapaz de entender a nadie. Asi que os toca trabajar juntos"},
+    {"next_scene":"", "transition":"fade"}
 ]
