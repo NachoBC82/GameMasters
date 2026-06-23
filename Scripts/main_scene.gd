@@ -12,7 +12,7 @@ func _ready() -> void:
 	# Connect signals
 	dialog_ui.choice_selected.connect(_on_choice_selected)
 	# load dialog
-	dialog_lines = load_dialog("res://resources/story/prototype.json")
+	dialog_lines = load_dialog("res://resources/story/cap1_sec1_esc1.json")
 	# Process firts line
 	dialog_index = 0
 	process_current_line()
