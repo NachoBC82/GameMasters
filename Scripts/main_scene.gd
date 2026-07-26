@@ -5,14 +5,18 @@ extends Node2D
 @onready var next_sentence_sound = %NextSentenceSound
 @onready var background = %Background
 
+var transition_effect: String = "fade"
+var dialog_file: String = "res://resources/story/cap1_sec1_esc1.json"
 var dialog_index : int
 var dialog_lines : Array = []
 
 func _ready() -> void:
 	# Connect signals
 	dialog_ui.choice_selected.connect(_on_choice_selected)
+	SceneManager.transition_out_completed.connect(_on_transition_out_completed)
+	SceneManager.transition_in_completed.connect(_on_transition_in_completed)
 	# load dialog
-	dialog_lines = load_dialog("res://resources/story/cap1_sec1_esc1.json")
+	dialog_lines = load_dialog(dialog_file)
 	# Process firts line
 	dialog_index = 0
 	process_current_line()
@@ -34,8 +38,16 @@ func _process(delta: float) -> void:
 
 func process_current_line():
 	var line = dialog_lines[dialog_index]
+	# Check if is is next scene
+	if line.has("next_scene"):
+		var next_scene = line["next_scene"]
+		dialog_file = "res://resources/story/" + next_scene + ".json" if !next_scene.is_empty() else ""
+		transition_effect = line.get("transition", "fade")
+		SceneManager.transition_out(transition_effect)
+		return		
+	
 	# Check if is goto command
-	if line.has("goto"):
+	elif line.has("goto"):
 		dialog_index = get_anchor_pos(line["goto"])
 		process_current_line()
 		return
@@ -99,4 +111,18 @@ func load_dialog(file_path):
 	
 func _on_choice_selected(anchor: String):
 	dialog_index = get_anchor_pos(anchor)
+	process_current_line()
+	
+func _on_transition_out_completed():
+	# Cargamos nuevo dialogo
+	dialog_lines = load_dialog(dialog_file)
+	dialog_index = 0
+	var first_line = dialog_lines[dialog_index]
+	if first_line.has("location"):
+		background.texture = load("res://assets/Background/" + first_line["location"] + ".png")
+		dialog_index += 1
+	SceneManager.transition_in(transition_effect)
+	
+func _on_transition_in_completed():
+	# Procesamos linea de dialogo
 	process_current_line()

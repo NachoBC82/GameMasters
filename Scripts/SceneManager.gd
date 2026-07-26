@@ -22,7 +22,7 @@ func _ready() -> void:
 	transitions_rect.visible = false
 	
 	transition_layer.add_child(transitions_rect) # Añadir pantalla en negro al layer
-	get_tree().root.add_child(transition_layer) # Añadir layer a la escena
+	get_tree().root.add_child.call_deferred(transition_layer) # Añadir layer a la escena
 	
 func transition_out(effect: String = "fade"):
 	match effect:
@@ -49,7 +49,7 @@ func _fade_out():
 	transitions_rect.visible = true
 	
 	var tween = create_tween()
-	tween.tween_property(transitions_rect, "modulate.a", 1.0, transition_time)
+	tween.tween_property(transitions_rect, "modulate:a", 1.0, transition_time)
 	tween.tween_callback(func(): transition_out_completed.emit()	)
 	
 func _fade_in():
@@ -59,7 +59,36 @@ func _fade_in():
 	transitions_rect.visible = true
 	
 	var tween = create_tween()
-	tween.tween_property(transitions_rect, "modulate.a", 0.0, transition_time)
+	tween.tween_property(transitions_rect, "modulate:a", 0.0, transition_time)
 	tween.tween_callback(func():
 		transitions_rect.visible = false
 		transition_in_completed.emit()	)
+		
+func _slide_out():
+	transitions_rect.modulate.a = 1
+	transitions_rect.visible = true
+	transitions_rect.z_index = 999
+	
+	var viewport_size = get_viewport_rect().size
+	transitions_rect.position.x = viewport_size.x
+	transitions_rect.position.y = 0
+	
+	var tween = create_tween()
+	tween.tween_property(transitions_rect, "position.x", 0, transition_time)
+	tween.tween_callback(func(): transition_out_completed.emit())
+	
+func _slide_in():
+	transitions_rect.modulate.a = 1
+	transitions_rect.visible = true
+	transitions_rect.z_index = 999
+	
+	var viewport_size = get_viewport_rect().size
+	transitions_rect.position.x = 0
+	transitions_rect.position.y = 0
+	
+	var tween = create_tween()
+	tween.tween_property(transitions_rect, "position.x", -viewport_size.x, transition_time)
+	tween.tween_callback(func(): 
+		transitions_rect.visible = false
+		transition_in_completed.emit()
+	)

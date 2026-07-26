@@ -19,5 +19,7 @@
 	{"speaker": "McNamara", "text": "Me gustaria pero han dejado una nota en papel y otra en txt. Donde solo han dejado A.H."},
 	{"speaker": "Agente377", "text": "No tiene sentido."},
 	{"speaker": "Lex", "text": "Si tiene. No es un robo por el dinero, es un mensaje. Seguramente para alguien o para nosotros."},
-	{"speaker": "McNamara", "text": "Si, esa es la teoria mas probable Lex. Ahora moved el culo e id hacia la escena"}
+	{"speaker": "McNamara", "text": "Si, esa es la teoria mas probable Lex. Ahora moved el culo e id hacia la escena"},
+	{"speaker": "Lex", "text": "Por supuesto jefa, le iremos informando"},
+	{"next_scene": "cap1_sec1_esc2", "transition": "fade"}
 ]
