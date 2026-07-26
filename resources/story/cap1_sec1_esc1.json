@@ -1,19 +1,19 @@
 [
 	{"location":"oficina"},
-    {"speaker": "McNamara", "text": "Bueno chicos, espero que os esteis llevando bien."},
+	{"speaker": "McNamara", "text": "Bueno chicos, espero que os esteis llevando bien."},
 	{"choices":[
-        {"text": "Para que? Si es solo una máquina, ni que pudiera entender lo que es las emociones humanas.", "goto":"discusion"},
-        {"text": "No, pero los criminales no van a esperar", "goto":"ir_al_grano"}
-    ]},
+		{"text": "Para que? Si es solo una máquina, ni que pudiera entender lo que es las emociones humanas.", "goto":"discusion"},
+		{"text": "No, pero los criminales no van a esperar", "goto":"ir_al_grano"}
+	]},
 	{"anchor":"discusion"},
 	{"speaker": "Agente377", "text": "Y aún así, se me da mejor empatizar con nuestra superiora, Lex."},
-    {"speaker": "Agente377", "text": "Veo que dejas mucho que desear como investigador."},
+	{"speaker": "Agente377", "text": "Veo que dejas mucho que desear como investigador."},
 	{"speaker": "Lex", "text": "Maldita máquina te juro que..."},
 	{"speaker": "McNamara", "text": "Bueno bueno, vale vale ya niños. Si habeís acabado de discutir, vamos a centrarnos en el caso."},
 	{"speaker": "Lex", "text": "Si teniente."},
 	{"speaker": "Agente377", "text": "A sus ordenes teniente."},
-    {"anchor":"ir_al_grano"},
-    {"speaker": "McNamara", "text": "Supongo que no puedo pedir mas de vosotros que esto"},
+	{"anchor":"ir_al_grano"},
+	{"speaker": "McNamara", "text": "Supongo que no puedo pedir mas de vosotros que esto"},
 	{"speaker": "McNamara", "text": "Bien, vamos a revisar los detalles del caso. Tenemos un robo doble en el banco. Digital y físico."},
 	{"speaker": "Agente377", "text": "Han sido capaces de vencer ambas seguridades? Estamos seguros que no nos enfrentamos a dos ladrones?"},
 	{"speaker": "McNamara", "text": "Me gustaria pero han dejado una nota en papel y otra en txt. Donde solo han dejado A.H."},
