@@ -1,25 +1,117 @@
 [
-	{"location":"oficina"},
-	{"speaker": "McNamara", "text": "Bueno chicos, espero que os esteis llevando bien."},
-	{"choices":[
-		{"text": "Para que? Si es solo una máquina, ni que pudiera entender lo que es las emociones humanas.", "goto":"discusion"},
-		{"text": "No, pero los criminales no van a esperar", "goto":"ir_al_grano"}
-	]},
-	{"anchor":"discusion"},
-	{"speaker": "Agente377", "text": "Y aún así, se me da mejor empatizar con nuestra superiora, Lex."},
-	{"speaker": "Agente377", "text": "Veo que dejas mucho que desear como investigador."},
-	{"speaker": "Lex", "text": "Maldita máquina te juro que..."},
-	{"speaker": "McNamara", "text": "Bueno bueno, vale vale ya niños. Si habeís acabado de discutir, vamos a centrarnos en el caso."},
-	{"speaker": "Lex", "text": "Si teniente."},
-	{"speaker": "Agente377", "text": "A sus ordenes teniente."},
-	{"anchor":"ir_al_grano"},
-	{"speaker": "McNamara", "text": "Supongo que no puedo pedir mas de vosotros que esto"},
-	{"speaker": "McNamara", "text": "Bien, vamos a revisar los detalles del caso. Tenemos un robo doble en el banco. Digital y físico."},
-	{"speaker": "Agente377", "text": "Han sido capaces de vencer ambas seguridades? Estamos seguros que no nos enfrentamos a dos ladrones?"},
-	{"speaker": "McNamara", "text": "Me gustaria pero han dejado una nota en papel y otra en txt. Donde solo han dejado A.H."},
-	{"speaker": "Agente377", "text": "No tiene sentido."},
-	{"speaker": "Lex", "text": "Si tiene. No es un robo por el dinero, es un mensaje. Seguramente para alguien o para nosotros."},
-	{"speaker": "McNamara", "text": "Si, esa es la teoria mas probable Lex. Ahora moved el culo e id hacia la escena"},
-	{"speaker": "Lex", "text": "Por supuesto jefa, le iremos informando"},
-	{"next_scene": "cap1_sec1_esc2", "transition": "fade"}
+    {"location":"oficina"},
+
+    {"speaker":"McNamara","text":"Bueno... ¿Habéis terminado de miraros como si fuerais a mataros?"},
+
+    {"choices":[
+        {"text":"No. Sigo esperando que alguien me explique por qué mi nuevo compañero necesita un puerto USB en lugar de un café.","goto":"hostil"},
+        {"text":"Podemos discutir después. Hay un caso esperándonos.","goto":"profesional"},
+        {"text":"Depende. ¿Las máquinas cuentan como gente oficialmente?","goto":"sarcastico"}
+    ]},
+
+    {"anchor":"hostil"},
+    {"speaker":"Agente377","text":"No necesito estimulantes para mantener el rendimiento operativo."},
+    {"speaker":"Agente377","text":"Interpreto su comentario como un intento de mostrar rechazo hacia mi presencia."},
+    {"speaker":"Lex","text":"Me alegra comprobar que al menos una función tuya sigue funcionando."},
+    {"speaker":"McNamara","text":"Basta. No pienso empezar otra reunión escuchando la misma discusión."},
+    {"goto":"caso"},
+
+    {"anchor":"profesional"},
+    {"speaker":"McNamara","text":"Por fin una frase con sentido. Empezaba a perder la esperanza."},
+    {"speaker":"Agente377","text":"Coincido. Retrasar el briefing perjudica la investigación."},
+    {"speaker":"McNamara","text":"Si fuerais así de eficientes todos los días, este departamento tendría menos bajas por estrés."},
+    {"goto":"caso"},
+
+    {"anchor":"sarcastico"},
+    {"speaker":"Agente377","text":"Legalmente soy un agente de policía."},
+    {"speaker":"Agente377","text":"Mi condición artificial no modifica mis competencias."},
+    {"speaker":"Lex","text":"Eso es precisamente lo que me preocupa."},
+    {"speaker":"McNamara","text":"Y eso es precisamente lo que no vamos a discutir ahora."},
+
+    {"anchor":"caso"},
+
+    {"speaker":"McNamara","text":"Escuchad con atención."},
+    {"speaker":"McNamara","text":"Hace cuatro horas alguien vació la cámara acorazada del Banco Nacional."},
+    {"speaker":"McNamara","text":"Hasta ahí sería un robo más."},
+    {"speaker":"McNamara","text":"Pero al mismo tiempo desaparecieron todos los fondos digitales almacenados en los servidores internos."},
+    {"speaker":"McNamara","text":"Dinero físico. Dinero digital. Ejecutado de forma simultánea."},
+
+    {"speaker":"Agente377","text":"Las dos operaciones requieren conocimientos completamente distintos."},
+    {"speaker":"Agente377","text":"Todo apunta a una acción coordinada."},
+
+    {"speaker":"Lex","text":"Entonces no buscamos a un ladrón."},
+    {"speaker":"Lex","text":"Buscamos a dos."},
+
+    {"speaker":"McNamara","text":"Eso creíamos."},
+    {"speaker":"McNamara","text":"Hasta que encontramos esto."},
+    {"speaker":"McNamara","text":"Una nota en papel dentro de la cámara acorazada."},
+    {"speaker":"McNamara","text":"Y un archivo de texto en el servidor comprometido."},
+    {"speaker":"McNamara","text":"Los dos contienen exactamente el mismo mensaje."},
+    {"speaker":"McNamara","text":"A.H."},
+
+    {"speaker":"Agente377","text":"No corresponde con ninguna firma conocida en nuestras bases de datos."},
+
+    {"choices":[
+        {"text":"No intentan firmar un robo. Intentan anunciar algo.","goto":"mensaje"},
+        {"text":"Solo quieren hacernos perder el tiempo buscando a alguien con esas iniciales.","goto":"engano"},
+        {"text":"¿Y si ni siquiera son iniciales?","goto":"iniciales"}
+    ]},
+
+    {"anchor":"mensaje"},
+    {"speaker":"Agente377","text":"Hipótesis compatible."},
+    {"speaker":"Lex","text":"Un golpe como este exige demasiados recursos."},
+    {"speaker":"Lex","text":"El dinero no puede ser el verdadero objetivo."},
+    {"goto":"conclusion"},
+
+    {"anchor":"engano"},
+    {"speaker":"Agente377","text":"Desviar la investigación es una práctica habitual en organizaciones criminales."},
+    {"speaker":"Lex","text":"Qué sorpresa. Hasta una máquina sabe eso."},
+    {"speaker":"Agente377","text":"No interpreto su comentario como una aportación a la investigación."},
+    {"goto":"conclusion"},
+
+    {"anchor":"iniciales"},
+    {"speaker":"Agente377","text":"La información disponible no permite determinar el significado de esas letras."},
+    {"speaker":"Lex","text":"Entonces tendremos que averiguarlo en la escena del crimen."},
+
+    {"anchor":"conclusion"},
+
+    {"speaker":"McNamara","text":"Estoy de acuerdo con Lex."},
+    {"speaker":"McNamara","text":"Ese mensaje estaba destinado a ser encontrado."},
+    {"speaker":"McNamara","text":"No sabemos si es una firma, una amenaza o una invitación."},
+    {"speaker":"McNamara","text":"Pero no pienso esperar a que vuelvan a actuar para descubrirlo."},
+
+    {"speaker":"Agente377","text":"¿Destino?"},
+
+    {"speaker":"McNamara","text":"Banco Central."},
+    {"speaker":"McNamara","text":"Quiero un informe preliminar antes del anochecer."},
+    {"speaker":"McNamara","text":"Y procurad recordar que los dos trabajáis para el mismo departamento."},
+
+    {"choices":[
+        {"text":"No prometo nada.","goto":"fin1"},
+        {"text":"Mientras él no empiece a analizarme otra vez.","goto":"fin2"},
+        {"text":"Conduciré yo.","goto":"fin3"}
+    ]},
+
+    {"anchor":"fin1"},
+    {"speaker":"Agente377","text":"La cooperación aumenta las posibilidades de resolver el caso."},
+    {"goto":"final"},
+
+    {"anchor":"fin2"},
+    {"speaker":"Agente377","text":"Comprender el comportamiento de mi compañero forma parte de mis funciones."},
+    {"goto":"final"},
+
+    {"anchor":"fin3"},
+    {"speaker":"Agente377","text":"Acepto."},
+    {"goto":"final"},
+
+    {"anchor":"final"},
+
+    {"speaker":"McNamara","text":"Fuera de mi despacho. Ahora."},
+
+    {"speaker":"Agente377","text":"Agente Lex."},
+    {"speaker":"Lex","text":"¿Qué?"},
+    {"speaker":"Agente377","text":"Espero que resolvamos este caso."},
+    {"speaker":"Lex","text":"Yo solo espero que no estorbes."},
+
+    {"next_scene":"cap1_sec1_esc2","transition":"fade"}
 ]
