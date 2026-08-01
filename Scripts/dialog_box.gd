@@ -47,7 +47,7 @@ func _process(delta: float):
 func change_line(speaker:Character.Name, line: String):
 	current_character_details = Character.CHARACTER_DETAILS[speaker]
 	speaker_name.text = current_character_details["name"]
-	current_visible_char = 0
+	current_visible_char = speaker
 	
 	dialog_line.text = line
 	dialog_line.visible_characters = 0

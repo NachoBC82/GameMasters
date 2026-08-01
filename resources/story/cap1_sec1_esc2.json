@@ -1,4 +1,153 @@
 [
 	{"location":"banco"},
-	{"speaker": "Lex", "text": "Recuerda policIA, hay quie ser empático"}
+
+	{"speaker":"Lex","text":"Los periódicos hablaban de un banco acordonado."},
+	{"speaker":"Lex","text":"Yo solo veo policías aburridos y cinta amarilla."},
+
+	{"speaker":"Agente377","text":"La escena fue asegurada hace tres horas."},
+	{"speaker":"Agente377","text":"La mayoría de pruebas ya han sido documentadas."},
+
+	{"choices":[
+		{"text":"'Así que venimos cuando ya han terminado de trabajar.'","goto":"hostil_inicio"},
+		{"text":"'Perfecto. Menos curiosos significa menos contaminación de pruebas.'","goto":"prof_inicio"},
+		{"text":"'¿Seguro que no has sido tú quien ha vaciado el banco, policIA?'","goto":"sar_inicio"}
+	]},
+
+	{"anchor":"hostil_inicio"},
+	{"speaker":"Agente377","text":"Su comentario carece de fundamento."},
+	{"speaker":"Lex","text":"Ya. Igual que traer a un detective cuando todo el mundo ya se ha ido."},
+	{"goto":"encuentro"},
+
+	{"anchor":"prof_inicio"},
+	{"speaker":"Agente377","text":"Coincido. El análisis será más eficiente."},
+	{"speaker":"Lex","text":"Al menos alguien piensa en este departamento."},
+	{"goto":"encuentro"},
+
+	{"anchor":"sar_inicio"},
+	{"speaker":"Agente377","text":"Dispongo de una coartada verificable."},
+	{"speaker":"Lex","text":"Era una broma, policIA."},
+	{"speaker":"Agente377","text":"He detectado sarcasmo con un 92% de probabilidad."},
+	{"speaker":"Lex","text":"Vas mejorando."},
+
+	{"anchor":"encuentro"},
+
+	{"speaker":"Henry","text":"Disculpen... ¿Son los investigadores?"},
+
+	{"speaker":"Agente377","text":"Correcto."},
+	{"speaker":"Agente377","text":"Identifíquese."},
+
+	{"speaker":"Henry","text":"Henry. Personal de limpieza."},
+
+	{"speaker":"Lex","text":"Ha elegido un mal día para limpiar."},
+
+	{"speaker":"Henry","text":"Créame... preferiría estar quitando manchas de café."},
+
+	{"speaker":"Lex","text":"Eso nos convierte en dos."},
+
+	{"speaker":"Agente377","text":"Necesitamos realizarle algunas preguntas."},
+
+	{"choices":[
+		{"text":"Presentarse educadamente.","goto":"prof_henry"},
+		{"text":"Ir directamente al interrogatorio.","goto":"hostil_henry"},
+		{"text":"Romper el hielo con una broma.","goto":"sar_henry"}
+	]},
+
+	{"anchor":"prof_henry"},
+	{"speaker":"Lex","text":"Soy Lex. Él es el policIA. Intentaremos no hacerle perder demasiado tiempo."},
+	{"speaker":"Henry","text":"Pregunten lo que necesiten."},
+	{"goto":"interrogatorio"},
+
+	{"anchor":"hostil_henry"},
+	{"speaker":"Lex","text":"Si nos oculta algo, acabaremos descubriéndolo."},
+	{"speaker":"Henry","text":"No tengo ningún motivo para hacerlo."},
+	{"goto":"interrogatorio"},
+
+	{"anchor":"sar_henry"},
+	{"speaker":"Lex","text":"No se preocupe. El policIA hace las preguntas aburridas y yo las incómodas."},
+	{"speaker":"Henry","text":"Intentaré sobrevivir a ambas."},
+	{"goto":"interrogatorio"},
+
+	{"anchor":"interrogatorio"},
+
+	{"speaker":"Agente377","text":"¿Cuál era su función esta mañana?"},
+
+	{"speaker":"Henry","text":"Limpiar la entrada, el vestíbulo y los pasillos públicos."},
+
+	{"speaker":"Henry","text":"Es mi turno habitual."},
+
+	{"speaker":"Lex","text":"¿Y podía moverse libremente por todo el banco?"},
+
+	{"speaker":"Henry","text":"No."},
+
+	{"speaker":"Henry","text":"Los de mantenimiento tenemos una tarjeta con acceso muy limitado."},
+
+	{"speaker":"Henry","text":"Solo abre las zonas comunes."},
+
+	{"speaker":"Henry","text":"La cámara acorazada, el centro de datos y las oficinas de dirección requieren otro nivel de autorización."},
+
+	{"speaker":"Agente377","text":"Confirmado."},
+
+	{"speaker":"Agente377","text":"Su credencial corresponde al nivel uno de acceso."},
+
+	{"speaker":"Agente377","text":"No existen registros de intentos de acceso a zonas restringidas desde su tarjeta."},
+
+	{"speaker":"Lex","text":"Así que, oficialmente, nunca pudo acercarse al dinero."},
+
+	{"speaker":"Henry","text":"Ni aunque hubiera querido."},
+
+	{"choices":[
+		{"text":"Preguntar por Beatrice.","goto":"bea"},
+		{"text":"Preguntar por el resto de empleados.","goto":"empleados"},
+		{"text":"Preguntar qué ocurrió cuando sonó la alarma.","goto":"alarma"}
+	]},
+
+	{"anchor":"bea"},
+
+	{"speaker":"Lex","text":"Hábleme de Beatrice."},
+
+	{"speaker":"Henry","text":"La vi salir pocos minutos antes de que llegara la policía."},
+
+	{"speaker":"Henry","text":"Estaba alterada, como cualquiera después de algo así."},
+
+	{"speaker":"Agente377","text":"¿Puede asegurarlo?"},
+
+	{"speaker":"Henry","text":"Sí."},
+
+	{"speaker":"Henry","text":"Yo seguía limpiando la entrada cuando salió."},
+
+	{"goto":"final"},
+
+	{"anchor":"empleados"},
+
+	{"speaker":"Henry","text":"Vi salir prácticamente a todos."},
+
+	{"speaker":"Henry","text":"Clientes, empleados y finalmente Beatrice."},
+
+	{"speaker":"Lex","text":"¿Todos?"},
+
+	{"speaker":"Henry","text":"Hasta donde pude ver, sí."},
+
+	{"goto":"final"},
+
+	{"anchor":"alarma"},
+
+	{"speaker":"Henry","text":"Sonó la alarma y empezaron a salir personas del edificio."},
+
+	{"speaker":"Henry","text":"Yo me limité a apartarme y esperar instrucciones."},
+
+	{"speaker":"Henry","text":"No tenía autorización para entrar más allá del vestíbulo."},
+
+	{"goto":"final"},
+
+	{"anchor":"final"},
+
+	{"speaker":"Agente377","text":"Su declaración coincide con los registros disponibles."},
+
+	{"speaker":"Henry","text":"Ojalá pueda servirles de ayuda."},
+
+	{"speaker":"Lex","text":"Eso esperamos."},
+
+	{"speaker":"Lex","text":"Vamos, policIA. Veamos qué nos ha dejado el ladrón dentro del banco."},
+
+	{"next_scene":"cap1_sec1_esc3","transition":"fade"}
 ]

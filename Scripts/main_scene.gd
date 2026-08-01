@@ -6,7 +6,7 @@ extends Node2D
 @onready var background = %Background
 
 var transition_effect: String = "fade"
-var dialog_file: String = "res://resources/story/cap1_sec1_esc1.json"
+var dialog_file: String = "res://resources/story/cap1_sec1_esc2.json"
 var dialog_index : int
 var dialog_lines : Array = []
 
