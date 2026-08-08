@@ -1,0 +1,5 @@
+1. El juego procesa el json poniendo el texto inicial de la escena
+2. En caso de que en el json aparezca la opción de objetos, el jugador debe poder explorar la escena seleccionando los distintos objetos del escenario. Si clica en el objeto del escenario debería lanzarse la parte del json indicada en ese objeto, es decir, como si fuera un goto.
+3. Algunos de estos objetos podrán ser sitios donde está un NPC.
+4. Los objetos como los NPC dirán información clave que el jugador podrá revisar en cualquier momento pulsando la tecla I de inventario. Alli aparecerán todas las pistas.
+5. Al final de la misión, hay un dialogo con la jefa en la cual las opciones de dialogo son las que ha conseguido investigando. Gastandose la opción en caso de ser correcta, denengandolo en caso de ser incorrecto y dejar que se elija de nuevo opción.

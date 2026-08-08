@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://do7wivpblv1al"]
+
+[ext_resource type="Texture2D" uid="uid://4vxio3tgnqfa" path="res://assets/Background/oficina.png" id="1_o0j4l"]
+[ext_resource type="Script" uid="uid://ddo6gkn6vbw8r" path="res://Scripts/Components/LocationBackground.gd" id="2_lae54"]
+
+[node name="Oficina" type="Node2D" unique_id=1460529603]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2064387995]
+texture = ExtResource("1_o0j4l")
+script = ExtResource("2_lae54")
