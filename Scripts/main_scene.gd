@@ -39,8 +39,8 @@ func _input(event: InputEvent) -> void:
 					dialog_index += 1
 					process_current_line()
 	elif interaction_mode == InteractionMode.gameMode.INVESTIGATION:
-		print("Modo investigacion")
-		interaction_mode = InteractionMode.gameMode.DIALOG
+		dialog_ui.set_process(false)
+		# interaction_mode = InteractionMode.gameMode.DIALOG
 
 func load_scene(file_path: String) -> void:
 	var scene_data = SceneLoader.load_scene(file_path)
@@ -80,8 +80,12 @@ func process_current_line() -> void:
 		process_current_line()		
 		
 	elif line.has("mode"):
-		interaction_mode = InteractionMode.get_enum_from_string(line["mode"])				
-
+		interaction_mode = InteractionMode.get_enum_from_string(line["mode"])
+		if interaction_mode == InteractionMode.gameMode.INVESTIGATION:
+			scene_stage.hide_ui()
+		else:
+			dialog_ui.visible = true 
+			dialog_ui.set_process(true) 
 	else:
 		var character_name = Character.get_enum_from_string(line["speaker"])
 		dialog_ui.change_line(character_name, line["text"])

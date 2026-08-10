@@ -36,15 +36,16 @@ unique_name_in_owner = true
 position = Vector2(0, 10)
 scale = Vector2(2, 2)
 
+[node name="DialogLayer" type="CanvasLayer" parent="SceneStage" unique_id=692854245]
+unique_name_in_owner = true
+
+[node name="Dialog" parent="SceneStage/DialogLayer" unique_id=454687236 instance=ExtResource("3_qxria")]
+unique_name_in_owner = true
+
 [node name="BackgroundLayer" type="CanvasLayer" parent="SceneStage" unique_id=67764681]
 unique_name_in_owner = true
 layer = -1
 script = ExtResource("7_bglyr")
 
 [node name="CurrentLocation" type="Node2D" parent="SceneStage/BackgroundLayer" unique_id=510107960]
-unique_name_in_owner = true
-
-[node name="DialogLayer" type="CanvasLayer" parent="." unique_id=692854245]
-
-[node name="Dialog" parent="DialogLayer" unique_id=454687236 instance=ExtResource("3_qxria")]
 unique_name_in_owner = true
