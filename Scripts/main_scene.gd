@@ -13,7 +13,7 @@ var interaction_mode : InteractionMode.gameMode
 func _ready() -> void:
 	# Conectar señales
 	dialog_ui.choice_selected.connect(_on_choice_selected)
-	scene_stage.hotspot_triggered.connect(_on_hotspot_triggered)
+	#scene_stage.hotspot_triggered.connect(_on_hotspot_triggered)
 	SceneManager.transition_out_completed.connect(_on_transition_out_completed)
 	SceneManager.transition_in_completed.connect(_on_transition_in_completed)
 
@@ -38,9 +38,8 @@ func _input(event: InputEvent) -> void:
 				if dialog_index < len(dialog_lines) - 1:
 					dialog_index += 1
 					process_current_line()
-	elif interaction_mode == InteractionMode.gameMode.INVESTIGATION:
-		dialog_ui.set_process(false)
-		# interaction_mode = InteractionMode.gameMode.DIALOG
+	elif interaction_mode == InteractionMode.gameMode.INVESTIGATION:		
+		interaction_mode = InteractionMode.gameMode.DIALOG
 
 func load_scene(file_path: String) -> void:
 	var scene_data = SceneLoader.load_scene(file_path)
@@ -83,8 +82,10 @@ func process_current_line() -> void:
 		interaction_mode = InteractionMode.get_enum_from_string(line["mode"])
 		if interaction_mode == InteractionMode.gameMode.INVESTIGATION:
 			scene_stage.hide_ui()
+			dialog_ui.set_process(false)
+			dialog_ui.stop_sound()
 		else:
-			dialog_ui.visible = true 
+			scene_stage.show()
 			dialog_ui.set_process(true) 
 	else:
 		var character_name = Character.get_enum_from_string(line["speaker"])
@@ -102,12 +103,6 @@ func get_anchor_pos(anchor: String):
 
 func _on_choice_selected(anchor: String) -> void:
 	dialog_index = get_anchor_pos(anchor)
-	process_current_line()
-
-func _on_hotspot_triggered(goto_id: String) -> void:
-	# TODO (Roadmap paso 2): esto empezará a dispararse de verdad
-	# cuando HotspotLayer genere hotspots reales y se puedan clicar.
-	dialog_index = get_anchor_pos(goto_id)
 	process_current_line()
 
 func _on_transition_out_completed() -> void:

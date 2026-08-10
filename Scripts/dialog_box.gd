@@ -79,3 +79,6 @@ func _on_sentence_pause_timer():
 func _on_choice_button_pressed(anchor: String):
 	choice_selected.emit(anchor)
 	choice_list.hide()
+	
+func stop_sound():
+	text_blip_sound.stop()

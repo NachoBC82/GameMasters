@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://brs1vrehvrosu"]
 
 [ext_resource type="Texture2D" uid="uid://b231t5biuik2x" path="res://assets/Background/banco.png" id="1_w7kkw"]
-[ext_resource type="Script" uid="uid://c5d4t5a1qv6v0" path="res://Scripts/Hotspot.gd" id="3_hwvgu"]
+[ext_resource type="Script" uid="uid://c5d4t5a1qv6v0" path="res://Scripts/Components/Hotspot.gd" id="3_hwvgu"]
 
 [node name="Banco" type="Node2D" unique_id=1460529603]
 

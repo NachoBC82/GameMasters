@@ -14,4 +14,3 @@ func play_sound(character_details: Dictionary):
 		var character_gender = character_details["gender"]
 		stream = voice_sounds[character_gender]
 	play()
-	
