@@ -4,40 +4,48 @@ extends Node2D
 @onready var dialog_ui = %Dialog
 
 var transition_effect: String = "fade"
-var dialog_file: String = "res://resources/story/cap1_sec1_esc1.json"
+var dialog_file: String = "res://resources/story/cap1_sec1_esc2.json"
 var dialog_index: int
 var dialog_lines: Array = []
 var scene_hotspots: Array = []
+var interaction_mode : InteractionMode.gameMode 
 
 func _ready() -> void:
+	# Conectar señales
 	dialog_ui.choice_selected.connect(_on_choice_selected)
 	scene_stage.hotspot_triggered.connect(_on_hotspot_triggered)
 	SceneManager.transition_out_completed.connect(_on_transition_out_completed)
 	SceneManager.transition_in_completed.connect(_on_transition_in_completed)
 
-	load_scene(dialog_file)
+	# Inicializar variables
 	dialog_index = 0
+	interaction_mode = InteractionMode.gameMode.DIALOG
+	
+	load_scene(dialog_file)	
 	process_current_line()
 
 func _input(event: InputEvent) -> void:
-	if dialog_lines.is_empty():
-		return
-	var line = dialog_lines[dialog_index]
-	var has_choices = line.has("choices")
-	if event.is_action_pressed("next_line") and not has_choices:
-		if dialog_ui.animate_text:
-			dialog_ui.skip_text_animation()
-		else:
-			if dialog_index < len(dialog_lines) - 1:
-				dialog_index += 1
-				process_current_line()
+	
+	if interaction_mode == InteractionMode.gameMode.DIALOG:
+		if dialog_lines.is_empty():
+			return
+		var line = dialog_lines[dialog_index]
+		var has_choices = line.has("choices")
+		if event.is_action_pressed("next_line") and not has_choices:
+			if dialog_ui.animate_text:
+				dialog_ui.skip_text_animation()
+			else:
+				if dialog_index < len(dialog_lines) - 1:
+					dialog_index += 1
+					process_current_line()
+	elif interaction_mode == InteractionMode.gameMode.INVESTIGATION:
+		print("Modo investigacion")
+		interaction_mode = InteractionMode.gameMode.DIALOG
 
 func load_scene(file_path: String) -> void:
 	var scene_data = SceneLoader.load_scene(file_path)
 	dialog_lines = scene_data.get("lines", [])
 	scene_hotspots = scene_data.get("hotspots", [])
-	scene_stage.clear_hotspots()
-	scene_stage.spawn_hotspots(scene_hotspots)
 
 func process_current_line() -> void:
 	var line = dialog_lines[dialog_index]
@@ -46,26 +54,22 @@ func process_current_line() -> void:
 		var next_scene = line["next_scene"]
 		dialog_file = "res://resources/story/" + next_scene + ".json" if !next_scene.is_empty() else ""
 		transition_effect = line.get("transition", "fade")
-		SceneManager.transition_out(transition_effect)
-		return
+		SceneManager.transition_out(transition_effect)		
 
 	elif line.has("goto"):
 		dialog_index = get_anchor_pos(line["goto"])
-		process_current_line()
-		return
+		process_current_line()		
 
 	elif line.has("anchor"):
 		dialog_index += 1
 		if dialog_index < len(dialog_lines):
-			process_current_line()
-		return
+			process_current_line()		
 
 	elif line.has("add_clue"):
 		# TODO (Roadmap paso 5): añadir la pista al inventario
 		dialog_index += 1
 		if dialog_index < len(dialog_lines):
-			process_current_line()
-		return
+			process_current_line()		
 
 	elif line.has("choices"):
 		dialog_ui.display_choices(line["choices"])
@@ -73,13 +77,17 @@ func process_current_line() -> void:
 	elif line.has("location"):
 		scene_stage.set_background(line["location"])
 		dialog_index += 1
-		process_current_line()
-		return
+		process_current_line()		
+		
+	elif line.has("mode"):
+		interaction_mode = InteractionMode.get_enum_from_string(line["mode"])				
 
 	else:
 		var character_name = Character.get_enum_from_string(line["speaker"])
 		dialog_ui.change_line(character_name, line["text"])
 		scene_stage.show_character(character_name)
+	
+	return
 
 func get_anchor_pos(anchor: String):
 	for i in range(dialog_lines.size()):

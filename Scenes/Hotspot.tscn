@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://in6ogtieu24b"]
+
+[ext_resource type="Script" uid="uid://c5d4t5a1qv6v0" path="res://Scripts/Hotspot.gd" id="1_xnybn"]
+
+[node name="Hotspot" type="Control" unique_id=1481974506]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_xnybn")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=865762877]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 1, 1, 0)

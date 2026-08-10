@@ -18,6 +18,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_w7kkw")
 stretch_mode = 5
+metadata/_edit_use_anchors_ = true
 
 [node name="Limpiador" type="Area2D" parent="." unique_id=1481941074]
 script = ExtResource("3_hwvgu")

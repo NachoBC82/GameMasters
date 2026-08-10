@@ -1,10 +1,24 @@
-[gd_scene format=3 uid="uid://do7wivpblv1al"]
+[gd_scene format=3 uid="uid://eqitf5314tch"]
 
 [ext_resource type="Texture2D" uid="uid://4vxio3tgnqfa" path="res://assets/Background/oficina.png" id="1_o0j4l"]
-[ext_resource type="Script" uid="uid://ddo6gkn6vbw8r" path="res://Scripts/Components/LocationBackground.gd" id="2_lae54"]
+[ext_resource type="Script" uid="uid://c5d4t5a1qv6v0" path="res://Scripts/Hotspot.gd" id="2_lae54"]
 
 [node name="Oficina" type="Node2D" unique_id=1460529603]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2064387995]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1699611328]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 1916.0
+offset_bottom = 1075.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_o0j4l")
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Hotspot" type="Area2D" parent="." unique_id=640032474]
 script = ExtResource("2_lae54")

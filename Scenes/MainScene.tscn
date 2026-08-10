@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://bgexkpfuf78nl" path="res://Scripts/Scene/SceneStage.gd" id="6_stage"]
 [ext_resource type="Script" uid="uid://dvb56y1doq21f" path="res://Scripts/Scene/CurrentLocation.gd" id="7_bglyr"]
 [ext_resource type="Script" uid="uid://dxypgawjhmfpv" path="res://Scripts/Scene/CharacterLayer.gd" id="8_chlyr"]
-[ext_resource type="Script" uid="uid://bo107qcyjyk41" path="res://Scripts/Scene/HotspotLayer.gd" id="9_hslyr"]
 
 [node name="MainScene" type="Node2D" unique_id=996154574]
 script = ExtResource("1_7rqgy")
@@ -44,10 +43,6 @@ script = ExtResource("7_bglyr")
 
 [node name="CurrentLocation" type="Node2D" parent="SceneStage/BackgroundLayer" unique_id=510107960]
 unique_name_in_owner = true
-
-[node name="HotspotLayer" type="CanvasLayer" parent="SceneStage" unique_id=1262268606]
-unique_name_in_owner = true
-script = ExtResource("9_hslyr")
 
 [node name="DialogLayer" type="CanvasLayer" parent="." unique_id=692854245]
 

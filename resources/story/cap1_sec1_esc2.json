@@ -1,5 +1,6 @@
-[
-	{"location":"banco"},
+{
+	"lines": [
+	{"location":"BancoExterior"},
 
 	{"speaker":"Lex","text":"Los periódicos hablaban de un banco acordonado."},
 	{"speaker":"Lex","text":"Yo solo veo policías aburridos y cinta amarilla."},
@@ -30,6 +31,9 @@
 	{"speaker":"Lex","text":"Vas mejorando."},
 
 	{"anchor":"encuentro"},
+
+	{"speaker":"Agente377","text":"Agente Lex, hay alguien en la puerta. Quizás es un testigo importante."},
+	{"mode":"investigation"},
 
 	{"speaker":"Henry","text":"Disculpen... ¿Son los investigadores?"},
 
@@ -150,4 +154,6 @@
 	{"speaker":"Lex","text":"Vamos, policIA. Veamos qué nos ha dejado el ladrón dentro del banco."},
 
 	{"next_scene":"cap1_sec1_esc3","transition":"fade"}
-]
+	],
+	"hotspots": []
+}
