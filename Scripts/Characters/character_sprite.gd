@@ -7,8 +7,8 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
-func change_character(name: Character.Name):
-	var sprite_texture = Character.CHARACTER_DETAILS[name]["Sprite2D"]
+func change_character(character_name: Character.Name) -> void:
+	var sprite_texture: Texture2D = Character.CHARACTER_DETAILS[character_name]["Sprite2D"]
 	if sprite_texture:
 		sprite.texture = sprite_texture
 	else:

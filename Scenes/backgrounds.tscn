@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://cbat12lgdx82s"]
-
-[node name="Backgrounds" type="Node2D" unique_id=1725006627]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=20916868]
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=994409256]
-offset_right = 40.0
-offset_bottom = 40.0
