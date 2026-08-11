@@ -7,13 +7,24 @@ var transition_effect: String = "fade"
 var dialog_file: String = "res://resources/story/cap1_sec1_esc2.json"
 var dialog_index: int
 var dialog_lines: Array = []
-var scene_hotspots: Array = []
 var interaction_mode : InteractionMode.gameMode 
+
+func init_investigation_mode():
+	interaction_mode = InteractionMode.gameMode.INVESTIGATION
+	scene_stage.hide_ui()
+	#dialog_ui.set_process(false)
+	dialog_ui.stop_sound()
+	
+func init_dialog_mode():
+	interaction_mode = InteractionMode.gameMode.DIALOG
+	scene_stage.show_ui()
+	#dialog_ui.set_process(true) 
+	 
 
 func _ready() -> void:
 	# Conectar señales
 	dialog_ui.choice_selected.connect(_on_choice_selected)
-	#scene_stage.hotspot_triggered.connect(_on_hotspot_triggered)
+	scene_stage.hotspot_trigger.connect(_on_hotspot_triggered)
 	SceneManager.transition_out_completed.connect(_on_transition_out_completed)
 	SceneManager.transition_in_completed.connect(_on_transition_in_completed)
 
@@ -24,8 +35,7 @@ func _ready() -> void:
 	load_scene(dialog_file)	
 	process_current_line()
 
-func _input(event: InputEvent) -> void:
-	
+func _input(event: InputEvent) -> void:	
 	if interaction_mode == InteractionMode.gameMode.DIALOG:
 		if dialog_lines.is_empty():
 			return
@@ -37,14 +47,11 @@ func _input(event: InputEvent) -> void:
 			else:
 				if dialog_index < len(dialog_lines) - 1:
 					dialog_index += 1
-					process_current_line()
-	elif interaction_mode == InteractionMode.gameMode.INVESTIGATION:		
-		interaction_mode = InteractionMode.gameMode.DIALOG
+					process_current_line()	
 
 func load_scene(file_path: String) -> void:
 	var scene_data = SceneLoader.load_scene(file_path)
 	dialog_lines = scene_data.get("lines", [])
-	scene_hotspots = scene_data.get("hotspots", [])
 
 func process_current_line() -> void:
 	var line = dialog_lines[dialog_index]
@@ -79,14 +86,15 @@ func process_current_line() -> void:
 		process_current_line()		
 		
 	elif line.has("mode"):
-		interaction_mode = InteractionMode.get_enum_from_string(line["mode"])
-		if interaction_mode == InteractionMode.gameMode.INVESTIGATION:
-			scene_stage.hide_ui()
-			dialog_ui.set_process(false)
-			dialog_ui.stop_sound()
-		else:
-			scene_stage.show()
-			dialog_ui.set_process(true) 
+		if InteractionMode.get_enum_from_string(line["mode"]) == InteractionMode.gameMode.DIALOG:
+			init_dialog_mode()			
+		elif InteractionMode.get_enum_from_string(line["mode"]) == InteractionMode.gameMode.INVESTIGATION:
+			if scene_stage.isAnyHotspotAvailables():
+				init_investigation_mode()
+			else:
+				init_dialog_mode()
+				dialog_index += 1
+				
 	else:
 		var character_name = Character.get_enum_from_string(line["speaker"])
 		dialog_ui.change_line(character_name, line["text"])
@@ -117,4 +125,9 @@ func _on_transition_out_completed() -> void:
 	SceneManager.transition_in(transition_effect)
 
 func _on_transition_in_completed() -> void:
+	process_current_line()
+	
+func _on_hotspot_triggered(name:String) -> void:
+	init_dialog_mode()	
+	dialog_index = get_anchor_pos(name)
 	process_current_line()

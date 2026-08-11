@@ -40,11 +40,10 @@ func _clear_current_location() -> void:
 
 func _connect_dynamic_hotspots() -> void:
 	# Busca los hotspots dentro del nodo de la ubicación actual
-	for child in current_location.get_children():
-		if child is Area2D:
-			if not child.clicked.is_connected(_on_hotspot_clicked):
-				child.clicked.connect(_on_hotspot_clicked)
+	for child in current_location.get_child(0).get_children():
+		if child is Area2D:						
+			if not child.hotspot_triggred.is_connected(_on_hotspot_clicked):
+				child.hotspot_triggred.connect(_on_hotspot_clicked)
 
 func _on_hotspot_clicked(name: String) -> void:
-	print(name)
 	hotspot_clicked.emit(name)

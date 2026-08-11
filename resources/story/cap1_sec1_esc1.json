@@ -117,6 +117,5 @@
 		{"speaker":"Lex","text":"Yo solo espero que no estorbes."},
 
 		{"next_scene":"cap1_sec1_esc2","transition":"fade"}
-	],
-	"hotspots": []
+	]
 }

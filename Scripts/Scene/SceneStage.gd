@@ -1,6 +1,8 @@
 class_name SceneStage
 extends Node2D
 
+signal hotspot_trigger(name:String)
+
 @onready var background_layer: BackgroundLayer = %BackgroundLayer
 @onready var character_layer: CharacterLayer = %CharacterLayer
 @onready var dialog_layer: Control = %Dialog
@@ -30,12 +32,16 @@ func hide_ui():
 	
 func show_ui():
 	dialog_layer.process_mode = Node.PROCESS_MODE_INHERIT
+	dialog_layer.propagate_call("play")
 	dialog_layer.show()
 	
 	character_layer.process_mode = Node.PROCESS_MODE_INHERIT
+	character_layer.propagate_call("play")
 	character_layer.show()
 
+func isAnyHotspotAvailables():
+	return hotspot_clicked < total_hotspot
 	
 func _on_hotspot_clicked(name: String) -> void:
 	hotspot_clicked += 1
-	print("Hotspot cliqueado: ", name)
+	hotspot_trigger.emit(name)
