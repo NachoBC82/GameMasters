@@ -6,7 +6,8 @@ enum Name {
 	AGENTE377,
 	POLICIA,
 	MCNAMARA,
-	HENRY
+	HENRY,
+	ANNA
 }
 
 const CHARACTER_DETAILS : Dictionary = {
@@ -34,7 +35,12 @@ const CHARACTER_DETAILS : Dictionary = {
 		"name": "Henry",
 		"gender":"male",
 		"Sprite2D": preload("res://assets/Sprite/Henry.png"),
-	}
+	},
+	Name.ANNA: {
+		"name": "Anna",
+		"gender":"female",
+		"Sprite2D": preload("res://assets/Sprite/Anna.png"),
+	},
 }
 
 static func get_enum_from_string(string_value: String) -> int:

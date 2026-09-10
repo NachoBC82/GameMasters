@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgyaxl6nvggds"
-path="res://.godot/imported/Lex_spirte.png-9ae0b2524fe35be86243ade7e4208577.ctex"
+uid="uid://wyf4ers6tqku"
+path="res://.godot/imported/BancoInterior.jpg-1f7fd13753e1d39eb2221d34c806eb5a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprite/Lex_spirte.png"
-dest_files=["res://.godot/imported/Lex_spirte.png-9ae0b2524fe35be86243ade7e4208577.ctex"]
+source_file="res://assets/Background/BancoInterior.jpg"
+dest_files=["res://.godot/imported/BancoInterior.jpg-1f7fd13753e1d39eb2221d34c806eb5a.ctex"]
 
 [params]
 

@@ -1,0 +1,342 @@
+{
+	"lines": [
+        {"location":"BancoInterior"},
+
+        {"speaker":"Lex","text":"Así que este es el interior."},
+
+        {"speaker":"Agente377","text":"Banco Central. Planta principal."},
+        {"speaker":"Agente377","text":"El robo se produjo en las instalaciones restringidas del edificio."},
+
+        {"speaker":"Lex","text":"Y nosotros vamos a empezar por la única persona que parece recordar menos de lo que debería."},
+
+        {"speaker":"Anna","text":"¿Perdón?"},
+
+        {"speaker":"Lex","text":"Anna, ¿verdad?"},
+
+        {"speaker":"Anna","text":"Sí."},
+
+        {"speaker":"Agente377","text":"Empleada de reciente incorporación."},
+
+        {"speaker":"Anna","text":"Llevo aquí poco más de un mes."},
+
+        {"speaker":"Agente377","text":"Un mes, tres días y seis horas."},
+
+        {"speaker":"Lex","text":"No hace falta que le enseñes el reloj, policIA."},
+
+        {"speaker":"Agente377","text":"La precisión temporal es relevante para la investigación."},
+
+        {"speaker":"Lex","text":"Claro. Porque nada dice 'interrogatorio agradable' como empezar contando las horas que lleva trabajando alguien."},
+
+        {"speaker":"Anna","text":"No pasa nada."},
+
+        {"speaker":"Anna","text":"Entiendo que tengan que hacerme preguntas."},
+
+        {"choices":[
+            {"text":"Empezar con preguntas básicas y dejar que Anna se calme.","goto":"profesional_inicio"},
+            {"text":"Intentar aliviar la tensión con una broma.","goto":"sarcastico_inicio"},
+            {"text":"Ir directamente a las contradicciones de su testimonio.","goto":"hostil_inicio"}
+        ]},
+
+        {"anchor":"profesional_inicio"},
+
+        {"speaker":"Lex","text":"Empecemos por lo sencillo."},
+
+        {"speaker":"Lex","text":"Quiero que me cuente qué ocurrió desde que llegó esta mañana."},
+
+        {"speaker":"Anna","text":"Llegué a las ocho menos cuarto."},
+
+        {"speaker":"Anna","text":"Después fui a mi despacho y revisé algunos informes."},
+
+        {"speaker":"Anna","text":"A eso de las nueve bajé a la planta principal."},
+
+        {"speaker":"Lex","text":"¿A eso de las nueve?"},
+
+        {"speaker":"Anna","text":"Sí. No recuerdo la hora exacta."},
+
+        {"speaker":"Agente377","text":"En su primera declaración indicó que fueron las nueve y diez."},
+
+        {"speaker":"Anna","text":"Puede ser. No... no estaba mirando el reloj."},
+
+        {"speaker":"Lex","text":"Está bien. Siga."},
+
+        {"goto":"declaracion"},
+
+        {"anchor":"sarcastico_inicio"},
+
+        {"speaker":"Lex","text":"Tranquila. El policIA parece intimidante, pero solo hace preguntas cuando detecta una anomalía."},
+
+        {"speaker":"Agente377","text":"No considero que mi aspecto sea intimidante."},
+
+        {"speaker":"Lex","text":"Eso es porque no tienes espejo."},
+
+        {"speaker":"Anna","text":"¿Siempre trabajan así?"},
+
+        {"speaker":"Lex","text":"Solo cuando el día empieza bien."},
+
+        {"speaker":"Anna","text":"Entonces supongo que hoy no es uno de esos días."},
+
+        {"speaker":"Lex","text":"Exacto."},
+
+        {"speaker":"Lex","text":"Cuénteme qué ocurrió esta mañana."},
+
+        {"speaker":"Anna","text":"Llegué a las ocho menos cuarto."},
+
+        {"speaker":"Anna","text":"Después fui a mi despacho y revisé unos informes."},
+
+        {"speaker":"Anna","text":"Creo que bajé a la planta principal sobre las nueve."},
+
+        {"speaker":"Agente377","text":"En su primera declaración indicó que fueron las nueve y diez."},
+
+        {"speaker":"Anna","text":"Sí... puede ser."},
+
+        {"speaker":"Anna","text":"No recuerdo la hora exacta."},
+
+        {"speaker":"Lex","text":"Después de un robo, recordar cada minuto parece mucho pedir."},
+
+        {"speaker":"Agente377","text":"La precisión de su testimonio sigue siendo insuficiente."},
+
+        {"goto":"declaracion"},
+
+        {"anchor":"hostil_inicio"},
+
+        {"speaker":"Lex","text":"Vamos a ahorrarnos tiempo."},
+
+        {"speaker":"Lex","text":"En su declaración hay varias cosas que no cuadran."},
+
+        {"speaker":"Anna","text":"¿Qué cosas?"},
+
+        {"speaker":"Lex","text":"Horas distintas. Lugares distintos."},
+
+        {"speaker":"Agente377","text":"Y una omisión relevante."},
+
+        {"speaker":"Anna","text":"No he omitido nada."},
+
+        {"speaker":"Agente377","text":"En su primera declaración afirmó que permaneció en la planta principal durante todo el incidente."},
+
+        {"speaker":"Agente377","text":"Posteriormente afirmó haber estado en su despacho."},
+
+        {"speaker":"Anna","text":"Yo... no recuerdo exactamente cuándo ocurrió cada cosa."},
+
+        {"speaker":"Lex","text":"Ese es precisamente el problema."},
+
+        {"goto":"declaracion"},
+
+        {"anchor":"declaracion"},
+
+        {"speaker":"Agente377","text":"¿Dónde se encontraba cuando comenzaron los problemas?"},
+
+        {"speaker":"Anna","text":"En la planta principal."},
+
+        {"speaker":"Agente377","text":"¿Está segura?"},
+
+        {"speaker":"Anna","text":"Sí."},
+
+        {"speaker":"Agente377","text":"Hace cinco minutos ha indicado que estaba en su despacho."},
+
+        {"speaker":"Anna","text":"No. Yo... quería decir que estaba bajando."},
+
+        {"speaker":"Agente377","text":"Su declaración vuelve a cambiar."},
+
+        {"speaker":"Anna","text":"Es que todo ocurrió muy rápido."},
+
+        {"speaker":"Agente377","text":"Eso no explica sus contradicciones."},
+
+        {"speaker":"Anna","text":"No estoy mintiendo."},
+
+        {"speaker":"Agente377","text":"No he afirmado que lo haga."},
+
+        {"speaker":"Anna","text":"Pero lo está insinuando."},
+
+        {"speaker":"Agente377","text":"Estoy estableciendo la posibilidad."},
+
+        {"speaker":"Lex","text":"PolicIA, baja un poco el tono."},
+
+        {"speaker":"Agente377","text":"El tono no afecta a la veracidad de sus respuestas."},
+
+        {"speaker":"Lex","text":"A ella sí."},
+
+        {"speaker":"Anna","text":"Yo solo llevo aquí un mes."},
+
+        {"speaker":"Anna","text":"Todavía no conozco bien el edificio."},
+
+        {"speaker":"Agente377","text":"Sin embargo, conocía la ubicación de la cámara acorazada."},
+
+        {"speaker":"Anna","text":"Todo empleado tiene que saber dónde está."},
+
+        {"speaker":"Agente377","text":"¿Y cómo se accede a ella?"},
+
+        {"speaker":"Anna","text":"No lo sé."},
+
+        {"speaker":"Agente377","text":"¿Está segura?"},
+
+        {"speaker":"Anna","text":"Sí."},
+
+        {"speaker":"Agente377","text":"Su puesto le permite acceder a determinadas zonas restringidas."},
+
+        {"speaker":"Anna","text":"Sí, pero no a la cámara."},
+
+        {"speaker":"Agente377","text":"¿Y al sistema financiero?"},
+
+        {"speaker":"Anna","text":"Solo a la parte que necesito para mi trabajo."},
+
+        {"speaker":"Agente377","text":"Entonces tenía acceso a información sensible."},
+
+        {"speaker":"Anna","text":"Como cualquier empleado de mi puesto."},
+
+        {"speaker":"Agente377","text":"Y también tenía oportunidad."},
+
+        {"speaker":"Anna","text":"No."},
+
+        {"speaker":"Agente377","text":"¿No?"},
+
+        {"speaker":"Anna","text":"No hice nada."},
+
+        {"speaker":"Agente377","text":"Todavía no ha explicado por qué su declaración contiene tantas imprecisiones."},
+
+        {"choices":[
+            {"text":"\"Está asustada. Si seguimos presionándola no vamos a conseguir nada.\"","goto":"empatica"},
+            {"text":"\"Anna, respire. Vamos a repasarlo todo desde el principio.\"","goto":"empatica"},
+            {"text":"\"Si no tiene nada que ocultar, deje de contradecirse.\"","goto":"coercitiva"}
+        ]},
+
+        {"anchor":"empatica"},
+
+        {"speaker":"Lex","text":"Está asustada."},
+
+        {"speaker":"Agente377","text":"El miedo no constituye una explicación suficiente."},
+
+        {"speaker":"Lex","text":"No. Pero sí explica por qué una persona acaba confundiendo una hora con otra."},
+
+        {"speaker":"Lex","text":"Anna, respire."},
+
+        {"speaker":"Anna","text":"Lo siento."},
+
+        {"speaker":"Lex","text":"No tiene que disculparse por estar nerviosa."},
+
+        {"speaker":"Lex","text":"Vamos a hacerlo de otra manera."},
+
+        {"speaker":"Lex","text":"No quiero que me diga lo que cree que ocurrió."},
+
+        {"speaker":"Lex","text":"Quiero que me diga solamente lo que recuerda."},
+
+        {"speaker":"Anna","text":"De acuerdo."},
+
+        {"speaker":"Anna","text":"Llegué a las ocho menos cuarto."},
+
+        {"speaker":"Anna","text":"Estuve en mi despacho hasta poco antes de las nueve."},
+
+        {"speaker":"Anna","text":"Después bajé a la planta principal."},
+
+        {"speaker":"Lex","text":"¿Y entonces?"},
+
+        {"speaker":"Anna","text":"Escuché a alguien discutir cerca de los ascensores."},
+
+        {"speaker":"Anna","text":"No pude ver quién era."},
+
+        {"speaker":"Lex","text":"¿Qué hizo?"},
+
+        {"speaker":"Anna","text":"Seguí trabajando."},
+
+        {"speaker":"Anna","text":"Después sonó la alarma."},
+
+        {"speaker":"Lex","text":"¿Dónde estaba cuando sonó?"},
+
+        {"speaker":"Anna","text":"En la recepción."},
+
+        {"speaker":"Agente377","text":"¿Puede demostrarlo?"},
+
+        {"speaker":"Anna","text":"La cámara de recepción debería haberme grabado."},
+
+        {"speaker":"Agente377","text":"Correcto."},
+
+        {"speaker":"Agente377","text":"La grabación confirma su presencia en la recepción durante el intervalo indicado."},
+
+        {"speaker":"Anna","text":"Entonces... ¿me creen?"},
+
+        {"speaker":"Lex","text":"Creo que ya tenemos algo que antes no teníamos."},
+
+        {"speaker":"Agente377","text":"Su coartada queda respaldada por evidencia independiente."},
+
+        {"speaker":"Anna","text":"Gracias."},
+
+        {"speaker":"Lex","text":"Todavía no se vaya."},
+
+        {"speaker":"Anna","text":"¿Por qué?"},
+
+        {"speaker":"Lex","text":"Porque todavía tenemos un banco que investigar."},
+
+        {"goto":"fin"},
+
+        {"anchor":"coercitiva"},
+
+        {"speaker":"Lex","text":"Si no tiene nada que ocultar, deje de contradecirse."},
+
+        {"speaker":"Anna","text":"No me estoy contradiciendo."},
+
+        {"speaker":"Agente377","text":"Acaba de hacerlo de nuevo."},
+
+        {"speaker":"Anna","text":"¡Porque no recuerdo cada minuto de esta mañana!"},
+
+        {"speaker":"Agente377","text":"Una persona inocente debería poder explicar dónde estaba durante un robo."},
+
+        {"speaker":"Anna","text":"¡Yo no he robado nada!"},
+
+        {"speaker":"Lex","text":"Entonces dígame dónde estaba."},
+
+        {"speaker":"Anna","text":"Ya se lo he dicho."},
+
+        {"speaker":"Agente377","text":"Sus respuestas continúan siendo inconsistentes."},
+
+        {"speaker":"Anna","text":"No puedo pensar así."},
+
+        {"speaker":"Agente377","text":"Eso no es una respuesta."},
+
+        {"speaker":"Anna","text":"¡Déjenme en paz!"},
+
+        {"speaker":"Lex","text":"Anna..."},
+
+        {"speaker":"Anna","text":"¡No sé qué quieren que les diga!"},
+
+        {"speaker":"Anna","text":"¡No sé dónde estaba exactamente cuando sonó la alarma!"},
+
+        {"speaker":"Anna","text":"¡No sé quién estaba en cada planta!"},
+
+        {"speaker":"Anna","text":"¡Llevo aquí un mes! ¡Ni siquiera conozco a la mitad de la gente que trabaja aquí!"},
+
+        {"speaker":"Agente377","text":"Su estado emocional impide continuar el interrogatorio."},
+
+        {"speaker":"Lex","text":"Eso ya lo has conseguido tú solo, policIA."},
+
+        {"speaker":"Agente377","text":"No considero que mi actuación haya sido inadecuada."},
+
+        {"speaker":"Lex","text":"Claro que no."},
+
+        {"speaker":"Lex","text":"Ese es el problema."},
+
+        {"speaker":"Anna","text":"No puedo seguir hablando."},
+
+        {"speaker":"Lex","text":"Está bien."},
+
+        {"speaker":"Agente377","text":"No hemos obtenido una coartada verificable."},
+
+        {"speaker":"Lex","text":"Tampoco hemos obtenido una confesión."},
+
+        {"speaker":"Agente377","text":"La sospecha permanece."},
+
+        {"speaker":"Lex","text":"Entonces tendremos que buscar respuestas en otro sitio."},
+
+        {"goto":"fin"},
+
+        {"anchor":"fin"},
+
+        {"speaker":"Lex","text":"Vamos, policIA."},
+
+        {"speaker":"Agente377","text":"¿Destino?"},
+
+        {"speaker":"Lex","text":"El resto del banco."},
+
+        {"speaker":"Lex","text":"Si alguien dejó una pista, no va a venir a entregárnosla."},
+
+        {"next_scene":"cap1_sec1_esc3","transition":"fade"}
+    ]
+}
