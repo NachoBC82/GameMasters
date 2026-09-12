@@ -4,7 +4,7 @@ extends Node2D
 @onready var dialog_ui = %Dialog
 
 var transition_effect: String = "fade"
-var dialog_file: String = "res://resources/story/cap1_sec1_esc3.json"
+var dialog_file: String = "res://resources/story/cap1_sec1_esc4_1.json"
 var dialog_index: int
 var dialog_lines: Array = []
 var interaction_mode : InteractionMode.gameMode 

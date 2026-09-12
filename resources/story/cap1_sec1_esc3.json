@@ -337,6 +337,6 @@
 
         {"speaker":"Lex","text":"Si alguien dejó una pista, no va a venir a entregárnosla."},
 
-        {"next_scene":"cap1_sec1_esc3","transition":"fade"}
+        {"next_scene":"cap1_sec1_esc4_1","transition":"fade"}
     ]
 }

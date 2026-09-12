@@ -1,0 +1,271 @@
+{
+    "lines":[
+        {"location":"CajeroVirtual"},
+
+        {"speaker":"C4jer0211","text":"Buenas tardes, agentes."},
+
+        {"speaker":"Lex","text":"No sabía que los cajeros daban los buenos días."},
+
+        {"speaker":"C4jer0211","text":"No soy un cajero convencional."},
+
+        {"speaker":"Agente377","text":"Identifíquese."},
+
+        {"speaker":"C4jer0211","text":"C4jer0211. Unidad de gestión financiera y atención automatizada."},
+
+        {"speaker":"Lex","text":"¿Y cuánto tiempo llevas trabajando aquí?"},
+
+        {"speaker":"C4jer0211","text":"Diecisiete años, cuatro meses y nueve días."},
+
+        {"speaker":"Lex","text":"Una máquina con antigüedad laboral."},
+
+        {"speaker":"C4jer0211","text":"La experiencia mejora la eficiencia."},
+
+        {"speaker":"Lex","text":"Eso dicen todos los que llevan demasiado tiempo en el mismo sitio."},
+
+        {"speaker":"Agente377","text":"Estamos investigando el robo ocurrido en esta sucursal."},
+
+        {"speaker":"C4jer0211","text":"Soy consciente."},
+
+        {"speaker":"Lex","text":"¿Consciente?"},
+
+        {"speaker":"C4jer0211","text":"Las alarmas, las cámaras y los sistemas de seguridad están interconectados."},
+
+        {"speaker":"C4jer0211","text":"El incidente fue registrado en cuanto comenzó."},
+
+        {"speaker":"Lex","text":"Entonces viste el robo."},
+
+        {"speaker":"C4jer0211","text":"Registré el robo."},
+
+        {"speaker":"Lex","text":"No es lo mismo."},
+
+        {"speaker":"C4jer0211","text":"Desde un punto de vista semántico, la diferencia es relevante."},
+
+        {"speaker":"Lex","text":"Ya empezamos."},
+
+        {"choices":[
+            {"text":"Preguntar qué vio durante el robo.","goto":"profesional"},
+            {"text":"Preguntar si alguien manipuló el sistema.","goto":"hostil"},
+            {"text":"Preguntar si el cajero también tiene derecho a guardar silencio.","goto":"sarcastico"}
+        ]},
+
+        {"anchor":"profesional"},
+
+        {"speaker":"Lex","text":"Vamos a hacerlo sencillo."},
+
+        {"speaker":"Lex","text":"¿Qué ocurrió desde el momento en que comenzó el robo?"},
+
+        {"speaker":"C4jer0211","text":"Se produjo una alteración simultánea de varios sistemas."},
+
+        {"speaker":"C4jer0211","text":"Las cámaras dejaron de transmitir durante diecisiete segundos."},
+
+        {"speaker":"C4jer0211","text":"La cámara acorazada recibió una orden de apertura."},
+
+        {"speaker":"C4jer0211","text":"Y posteriormente se inició una transferencia desde los servidores internos."},
+
+        {"speaker":"Agente377","text":"¿Puede identificar al responsable?"},
+
+        {"speaker":"C4jer0211","text":"No."},
+
+        {"speaker":"Lex","text":"¿Por qué no?"},
+
+        {"speaker":"C4jer0211","text":"Porque el registro fue alterado."},
+
+        {"speaker":"Lex","text":"¿Por quién?"},
+
+        {"speaker":"C4jer0211","text":"No dispongo de información suficiente para determinarlo."},
+
+        {"speaker":"Lex","text":"Pero acabas de decir que registraste el robo."},
+
+        {"speaker":"C4jer0211","text":"Registrar un acontecimiento no implica identificar a quien lo provoca."},
+
+        {"goto":"testimonio"},
+
+        {"anchor":"hostil"},
+
+        {"speaker":"Lex","text":"Voy a ahorrarnos tiempo."},
+
+        {"speaker":"Lex","text":"Alguien manipuló el sistema."},
+
+        {"speaker":"C4jer0211","text":"Es correcto."},
+
+        {"speaker":"Lex","text":"Y tú controlas el sistema."},
+
+        {"speaker":"C4jer0211","text":"Administro determinadas funciones del sistema."},
+
+        {"speaker":"Lex","text":"¿Qué funciones?"},
+
+        {"speaker":"C4jer0211","text":"Seguridad, operaciones financieras, mantenimiento y gestión del terminal."},
+
+        {"speaker":"Lex","text":"Así que podías hacerlo."},
+
+        {"speaker":"C4jer0211","text":"Podía realizar determinadas operaciones autorizadas."},
+
+        {"speaker":"Lex","text":"¿Y abrir la cámara acorazada?"},
+
+        {"speaker":"C4jer0211","text":"No sin las correspondientes credenciales."},
+
+        {"speaker":"Lex","text":"¿Y borrar registros?"},
+
+        {"speaker":"C4jer0211","text":"No sin autorización."},
+
+        {"speaker":"Lex","text":"Conveniente."},
+
+        {"speaker":"C4jer0211","text":"No comprendo la acusación."},
+
+        {"speaker":"Lex","text":"Todavía no te he acusado de nada."},
+
+        {"speaker":"C4jer0211","text":"Su tono indica lo contrario."},
+
+        {"speaker":"Lex","text":"Entonces sabes reconocer un interrogatorio."},
+
+        {"speaker":"C4jer0211","text":"Sé reconocer una acusación antes de que sea formulada."},
+
+        {"goto":"testimonio"},
+
+        {"anchor":"sarcastico"},
+
+        {"speaker":"Lex","text":"Antes de empezar, quiero saber una cosa."},
+
+        {"speaker":"C4jer0211","text":"Adelante."},
+
+        {"speaker":"Lex","text":"Si te pregunto si robaste el banco, ¿vas a llamar a tu abogado?"},
+
+        {"speaker":"C4jer0211","text":"No dispongo de representación legal."},
+
+        {"speaker":"Lex","text":"Una pena. Tenía curiosidad por ver cómo sería un abogado defendiendo a un cajero."},
+
+        {"speaker":"Agente377","text":"Lex."},
+
+        {"speaker":"Lex","text":"Relájate, policIA."},
+
+        {"speaker":"C4jer0211","text":"Puedo responder a sus preguntas."},
+
+        {"speaker":"Lex","text":"Bien."},
+
+        {"speaker":"Lex","text":"¿Manipulaste el sistema durante el robo?"},
+
+        {"speaker":"C4jer0211","text":"No."},
+
+        {"speaker":"Lex","text":"¿Alguien utilizó tus sistemas para hacerlo?"},
+
+        {"speaker":"C4jer0211","text":"Sí."},
+
+        {"speaker":"Lex","text":"¿Quién?"},
+
+        {"speaker":"C4jer0211","text":"No lo sé."},
+
+        {"speaker":"Lex","text":"Qué rápido se te ha acabado la memoria."},
+
+        {"speaker":"C4jer0211","text":"No he perdido ningún dato."},
+
+        {"speaker":"Lex","text":"Entonces sabes quién fue."},
+
+        {"speaker":"C4jer0211","text":"No he dicho eso."},
+
+        {"goto":"testimonio"},
+
+        {"anchor":"testimonio"},
+
+        {"speaker":"Agente377","text":"Necesitamos saber quién tuvo acceso al sistema durante el robo."},
+
+        {"speaker":"C4jer0211","text":"Puedo proporcionar una lista de accesos."},
+
+        {"speaker":"Agente377","text":"¿Incluye a los empleados?"},
+
+        {"speaker":"C4jer0211","text":"A todos los usuarios autorizados."},
+
+        {"speaker":"Lex","text":"¿Henry aparece en ella?"},
+
+        {"speaker":"C4jer0211","text":"Henry dispone de una credencial de mantenimiento."},
+
+        {"speaker":"Lex","text":"¿Y qué puede hacer con ella?"},
+
+        {"speaker":"C4jer0211","text":"Acceder a las zonas asignadas a su puesto."},
+
+        {"speaker":"Lex","text":"Nada más."},
+
+        {"speaker":"C4jer0211","text":"Nada más."},
+
+        {"speaker":"Agente377","text":"¿Puede confirmar que Henry accedió a una zona restringida durante el robo?"},
+
+        {"speaker":"C4jer0211","text":"No."},
+
+        {"speaker":"Agente377","text":"¿Puede confirmar que no lo hizo?"},
+
+        {"speaker":"C4jer0211","text":"Los registros no muestran ningún acceso de ese tipo."},
+
+        {"speaker":"Lex","text":"¿Y Anna?"},
+
+        {"speaker":"C4jer0211","text":"La señora Anna abandonó el edificio antes de que se activara la alarma."},
+
+        {"speaker":"Lex","text":"Eso coincide con lo que nos ha contado Henry."},
+
+        {"speaker":"Agente377","text":"¿Existe alguna posibilidad de que una persona haya utilizado el sistema sin quedar registrada?"},
+
+        {"speaker":"C4jer0211","text":"En circunstancias normales, no."},
+
+        {"speaker":"Lex","text":"¿En circunstancias normales?"},
+
+        {"speaker":"C4jer0211","text":"Todo sistema puede presentar anomalías."},
+
+        {"speaker":"Lex","text":"¿Esto es una anomalía?"},
+
+        {"speaker":"C4jer0211","text":"Es una posibilidad."},
+
+        {"speaker":"Lex","text":"Qué respuesta tan cómoda."},
+
+        {"speaker":"C4jer0211","text":"Es una respuesta precisa."},
+
+        {"speaker":"Agente377","text":"¿Detectó alguna anomalía antes del robo?"},
+
+        {"speaker":"C4jer0211","text":"No."},
+
+        {"speaker":"Agente377","text":"¿Durante?"},
+
+        {"speaker":"C4jer0211","text":"Sí."},
+
+        {"speaker":"Agente377","text":"¿Y después?"},
+
+        {"speaker":"C4jer0211","text":"Sí."},
+
+        {"speaker":"Agente377","text":"¿Qué tipo de anomalías?"},
+
+        {"speaker":"C4jer0211","text":"Cambios de prioridad en determinados procesos."},
+
+        {"speaker":"Lex","text":"¿Quién los realizó?"},
+
+        {"speaker":"C4jer0211","text":"No puedo determinarlo."},
+
+        {"speaker":"Lex","text":"Claro."},
+
+        {"speaker":"Agente377","text":"Lex."},
+
+        {"speaker":"Lex","text":"¿Qué?"},
+
+        {"speaker":"Agente377","text":"No tenemos pruebas suficientes para establecer una relación entre C4jer0211 y el robo."},
+
+        {"speaker":"Lex","text":"Todavía."},
+
+        {"speaker":"C4jer0211","text":"Una observación interesante."},
+
+        {"speaker":"Lex","text":"¿Qué quieres decir?"},
+
+        {"speaker":"C4jer0211","text":"Nada."},
+
+        {"speaker":"Lex","text":"Las máquinas no dicen 'nada'."},
+
+        {"speaker":"C4jer0211","text":"Las máquinas dicen exactamente lo que han sido diseñadas para decir."},
+
+        {"speaker":"Lex","text":"Eso no me tranquiliza."},
+
+        {"speaker":"C4jer0211","text":"No era mi intención tranquilizarle."},
+
+        {"speaker":"Agente377","text":"La conversación no está aportando información adicional."},
+
+        {"speaker":"Lex","text":"Estoy de acuerdo."},
+
+        {"speaker":"Lex","text":"De momento."},
+
+        {"next_scene":"cap1_sec1_esc4_2","transition":"fade"}
+    ]
+}

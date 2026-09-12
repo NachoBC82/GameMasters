@@ -7,7 +7,8 @@ enum Name {
 	POLICIA,
 	MCNAMARA,
 	HENRY,
-	ANNA
+	ANNA,
+	C4JER0211
 }
 
 const CHARACTER_DETAILS : Dictionary = {
@@ -40,6 +41,11 @@ const CHARACTER_DETAILS : Dictionary = {
 		"name": "Anna",
 		"gender":"female",
 		"Sprite2D": preload("res://assets/Sprite/Anna.png"),
+	},
+	Name.C4JER0211: {
+		"name": "C4jer0 211",
+		"gender":"ai",
+		"Sprite2D": preload("res://assets/Sprite/c4jer0.png"),
 	},
 }
 

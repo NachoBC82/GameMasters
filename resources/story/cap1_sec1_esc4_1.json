@@ -1,0 +1,40 @@
+{
+    "lines":[
+        {"location":"CajeroFisico"},
+
+        {"speaker":"Agente377","text":"Aquí está el cajero que aparece en los registros del robo."},
+
+        {"speaker":"Lex","text":"Parece que alguien lo ha tratado mejor que al resto del banco."},
+
+        {"speaker":"Agente377","text":"El terminal no presenta daños físicos."},
+
+        {"speaker":"Lex","text":"Entonces no lo robaron a golpes."},
+
+        {"speaker":"Agente377","text":"No."},
+
+        {"speaker":"Lex","text":"¿Y qué propones, policIA?"},
+
+        {"speaker":"Agente377","text":"Conectarnos directamente al terminal."},
+
+        {"speaker":"Lex","text":"¿Conectarnos?"},
+
+        {"speaker":"Agente377","text":"El cajero conserva una copia de sus registros internos."},
+
+        {"speaker":"Agente377","text":"Si queremos interrogar al sistema, debemos acceder a su interfaz de diagnóstico."},
+
+        {"speaker":"Lex","text":"Perfecto."},
+
+        {"speaker":"Lex","text":"Un interrogatorio a una máquina. Justo lo que me faltaba."},
+
+        {"speaker":"Agente377","text":"Técnicamente, ya ha interrogado a una."},
+
+        {"speaker":"Lex","text":"No te emociones, policIA."},
+
+        {"speaker":"Agente377","text":"Procedo a establecer la conexión."},
+
+        {"speaker":"Lex","text":"Adelante."},
+        {"mode":"investigation"},
+        {"anchor":"EntradaVirtual"},
+        {"next_scene":"cap1_sec1_esc4_2","transition":"fade"}
+    ]
+}
