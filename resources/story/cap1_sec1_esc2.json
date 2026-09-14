@@ -101,14 +101,14 @@
 	{"speaker":"Henry","text":"Ni aunque hubiera querido."},
 
 	{"choices":[
-		{"text":"Preguntar por Beatrice.","goto":"bea"},
+		{"text":"Preguntar por Anna.","goto":"bea"},
 		{"text":"Preguntar por el resto de empleados.","goto":"empleados"},
 		{"text":"Preguntar qué ocurrió cuando sonó la alarma.","goto":"alarma"}
 	]},
 
 	{"anchor":"bea"},
 
-	{"speaker":"Lex","text":"Hábleme de Beatrice."},
+	{"speaker":"Lex","text":"Hábleme de Anna."},
 
 	{"speaker":"Henry","text":"La vi salir pocos minutos antes de que llegara la policía."},
 
@@ -126,7 +126,7 @@
 
 	{"speaker":"Henry","text":"Vi salir prácticamente a todos."},
 
-	{"speaker":"Henry","text":"Clientes, empleados y finalmente Beatrice."},
+	{"speaker":"Henry","text":"Clientes, empleados y finalmente Anna."},
 
 	{"speaker":"Lex","text":"¿Todos?"},
 

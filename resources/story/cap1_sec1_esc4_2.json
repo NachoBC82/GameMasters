@@ -264,8 +264,18 @@
 
         {"speaker":"Lex","text":"Estoy de acuerdo."},
 
-        {"speaker":"Lex","text":"De momento."},
+        {"speaker":"Lex","text":"Lo más evaluable ahora mismo sería acabar la conversación y reunirnos a evaluar las pistas."},
 
-        {"next_scene":"cap1_sec1_esc4_2","transition":"fade"}
+        {"speaker":"Agente377","text":"¿Quieres que desconecte la sesión?"},
+
+        {"speaker":"Lex","text":"Sí."},
+
+        {"speaker":"C4jer0211","text":"La sesión se cerrará en cinco segundos."},
+
+        {"speaker":"Lex","text":"Adiós, C4jer0211."},
+
+        {"speaker":"C4jer0211","text":"Adiós, agentes."},
+
+        {"next_scene":"cap1_sec2_esc1","transition":"fade"}
     ]
 }

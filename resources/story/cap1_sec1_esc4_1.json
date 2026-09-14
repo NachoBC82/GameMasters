@@ -35,6 +35,6 @@
         {"speaker":"Lex","text":"Adelante."},
         {"mode":"investigation"},
         {"anchor":"EntradaVirtual"},
-        {"next_scene":"cap1_sec1_esc4_2","transition":"fade"}
+        {"next_scene":"cap1_sec1_esc4_2","transition":"slide"}
     ]
 }
