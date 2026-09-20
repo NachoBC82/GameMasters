@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b46mepsddwuu8"]
+
+[ext_resource type="Texture2D" uid="uid://wyf4ers6tqku" path="res://assets/Background/BancoInterior.jpg" id="1_q2wec"]
+[ext_resource type="Script" uid="uid://c5d4t5a1qv6v0" path="res://Scripts/Components/Hotspot.gd" id="2_20hnu"]
+
+[node name="BancoInterior" type="Node2D" unique_id=1460529603]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=247862011]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 1916.0
+offset_bottom = 1075.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_q2wec")
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Limpiador" type="Area2D" parent="." unique_id=1481941074]
+script = ExtResource("2_20hnu")

@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bjoi7guepypi3"]
+
+[ext_resource type="Script" uid="uid://crk7qycrhae41" path="res://Scripts/main_scene.gd" id="1_7rqgy"]
+[ext_resource type="PackedScene" uid="uid://c5yx7a81dyts" path="res://Scenes/Characters/CharacterSprite.tscn" id="2_7rqgy"]
+[ext_resource type="PackedScene" uid="uid://bobr7a6dpany5" path="res://Scenes/UI/dialogUI.tscn" id="3_qxria"]
+[ext_resource type="Script" uid="uid://bgexkpfuf78nl" path="res://Scripts/Scene/SceneStage.gd" id="6_stage"]
+[ext_resource type="Script" uid="uid://dvb56y1doq21f" path="res://Scripts/Scene/CurrentLocation.gd" id="7_bglyr"]
+[ext_resource type="Script" uid="uid://dxypgawjhmfpv" path="res://Scripts/Scene/CharacterLayer.gd" id="8_chlyr"]
+
+[node name="MainScene" type="Node2D" unique_id=996154574]
+script = ExtResource("1_7rqgy")
+
+[node name="SceneStage" type="Node2D" parent="." unique_id=1522448247]
+unique_name_in_owner = true
+script = ExtResource("6_stage")
+
+[node name="CharacterLayer" type="CanvasLayer" parent="SceneStage" unique_id=1320359758]
+unique_name_in_owner = true
+script = ExtResource("8_chlyr")
+
+[node name="Control" type="Control" parent="SceneStage/CharacterLayer" unique_id=1226034518]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharacterSprite" parent="SceneStage/CharacterLayer/Control" unique_id=1270477633 instance=ExtResource("2_7rqgy")]
+unique_name_in_owner = true
+position = Vector2(0, 10)
+scale = Vector2(2, 2)
+
+[node name="DialogLayer" type="CanvasLayer" parent="SceneStage" unique_id=692854245]
+unique_name_in_owner = true
+
+[node name="Dialog" parent="SceneStage/DialogLayer" unique_id=454687236 instance=ExtResource("3_qxria")]
+unique_name_in_owner = true
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="SceneStage" unique_id=67764681]
+unique_name_in_owner = true
+layer = -1
+script = ExtResource("7_bglyr")
+
+[node name="CurrentLocation" type="Node2D" parent="SceneStage/BackgroundLayer" unique_id=510107960]
+unique_name_in_owner = true

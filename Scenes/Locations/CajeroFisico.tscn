@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c6wmp5vjmj2oy"]
+
+[ext_resource type="Texture2D" uid="uid://d15hkbyvm2eky" path="res://assets/Background/cajero_fisico.jpg" id="1_mnu8v"]
+[ext_resource type="Script" uid="uid://c5d4t5a1qv6v0" path="res://Scripts/Components/Hotspot.gd" id="2_44hsg"]
+
+[node name="Banco" type="Node2D" unique_id=1460529603]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=247862011]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 1.0
+offset_right = 1916.0
+offset_bottom = 1076.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mnu8v")
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="EntradaVirtual" type="Area2D" parent="." unique_id=1481941074]
+script = ExtResource("2_44hsg")
+
+[node name="CollisionPolygone2D" type="CollisionPolygon2D" parent="EntradaVirtual" unique_id=772807367]
+unique_name_in_owner = true
+position = Vector2(-673, -268)
+polygon = PackedVector2Array(2290, 1119, 2171, 1095, 2170, 1342, 1244, 1341, 1234, 1120, 1358, 508, 1368, 499, 2107, 500, 2138, 730, 2295, 698)

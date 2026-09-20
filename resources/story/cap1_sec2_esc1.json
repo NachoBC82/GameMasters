@@ -1,0 +1,201 @@
+{
+	"lines": [
+		{"location": "Restaurante"},
+
+		{"speaker": "Lex", "text": "Hacía tiempo que no me sentaba a una mesa sin que alguien me estuviera gritando o pidiendo un abogado."},
+
+		{"speaker": "Agente377", "text": "Mi presencia aquí responde a la necesidad de evaluar las hipótesis en un entorno con menor carga sensorial."},
+		{"speaker": "Agente377", "text": "No requiero consumir alimentos ni bebidas, pero el análisis de las evidencias recopiladas es prioritario."},
+
+		{"choices":[
+			{"text": "«Dejemos las diferencias a un lado y repasemos lo que tenemos.»", "goto": "profesional_inicio"},
+			{"text": "«Cenar con alguien que se alimenta de vatios no estaba en mis planes, policIA.»", "goto": "sarcastico_inicio"},
+			{"text": "«No pierdas el tiempo justificándote. Vamos al grano antes de que me arrepienta.»", "goto": "hostil_inicio"}
+		]},
+
+		{"anchor": "profesional_inicio"},
+
+		{"speaker": "Lex", "text": "Dejemos las diferencias a un lado por un momento."},
+		{"speaker": "Lex", "text": "Tenemos tres interrogatorios a las espaldas, pruebas cruzadas y demasiado ruido. Pongamos orden."},
+
+		{"speaker": "Agente377", "text": "Aceptado. Iniciando protocolo de síntesis y estructuración del grafo deductivo."},
+
+		{"goto": "repaso_henry"},
+
+		{"anchor": "sarcastico_inicio"},
+
+		{"speaker": "Lex", "text": "Cenar con alguien que se alimenta de refrigerante sintético no era exactamente mi plan para hoy."},
+
+		{"speaker": "Agente377", "text": "Mis sistemas operan mediante refrigeración líquida de circuito cerrado. El comentario es irrelevante para la investigación."},
+
+		{"speaker": "Lex", "text": "Era una forma de hablar, policIA. Aprovechemos la mesa tranquila y pongamos en orden las piezas."},
+
+		{"goto": "repaso_henry"},
+
+		{"anchor": "hostil_inicio"},
+
+		{"speaker": "Lex", "text": "No pierdas el tiempo justificándote."},
+
+		{"speaker": "Lex", "text": "Si me he sentado contigo es solo porque prefiero repasar las pistas a volver a la oficina a escuchar a McNamara."},
+
+		{"speaker": "Agente377", "text": "Entendido. La eficiencia analítica no requiere afinidad personal."},
+
+		{"speaker": "Lex", "text": "Exacto. Empecemos a destripar lo que nos han dicho esos tres."},
+
+		{"goto": "repaso_henry"},
+
+		{"anchor": "repaso_henry"},
+
+		{"speaker": "Agente377", "text": "Comencemos por el primer sujeto interrogado en el exterior del banco: Henry, el personal de limpieza."},
+
+		{"speaker": "Lex", "text": "El hombre de la fregona. Estaba en la entrada cuando todo saltó por los aires."},
+
+		{"speaker": "Agente377", "text": "Verifiqué su tarjeta de acceso: corresponde estrictamente al Nivel 1. Solo zonas comunes y vestíbulo."},
+
+		{"speaker": "Agente377", "text": "No existen registros de que intentara aproximarse a la cámara acorazada ni al centro de datos."},
+
+		{"speaker": "Lex", "text": "Físicamente, él no pudo abrir la cámara. Pero Henry estaba en una posición privilegiada: la puerta principal."},
+
+		{"speaker": "Lex", "text": "Vio salir a los clientes, vio salir a Beatrice alterada antes de que llegara la policía... y afirmó ver salir a Anna."},
+
+		{"speaker": "Agente377", "text": "Lo cual coincide parcialmente con los registros de la unidad C4jer0211."},
+
+		{"speaker": "Lex", "text": "«Parcialmente». Ahí es donde empieza lo interesante."},
+
+		{"goto": "repaso_anna"},
+
+		{"anchor": "repaso_anna"},
+
+		{"speaker": "Agente377", "text": "Pasemos a Anna. Empleada de reciente incorporación: un mes, tres días y seis horas."},
+
+		{"speaker": "Lex", "text": "No hace falta que repitas la precisión de tu reloj, policIA. El caso es que su testimonio era un desastre."},
+
+		{"speaker": "Lex", "text": "Primero dijo que bajó a la planta principal a las nueve. Luego que eran las nueve y diez. Luego que estaba en su despacho... y al final que estaba bajando por la escalera."},
+
+		{"speaker": "Agente377", "text": "En un análisis preliminar, tantas inconsistencias temporales sugieren un intento deliberado de ocultación o falsificación de coartada."},
+
+		{"speaker": "Lex", "text": "O pánico. Cuando alguien está asustado, diez minutos parecen una hora."},
+
+		{"speaker": "Agente377", "text": "Sin embargo, el elemento determinante es la grabación de la cámara de recepción."},
+
+		{"speaker": "Agente377", "text": "La cámara confirma que Anna estaba efectivamente en la recepción en el intervalo crítico del robo."},
+
+		{"speaker": "Lex", "text": "Lo que respalda su coartada física. Pero Anna admitió algo crucial: tiene acceso al sistema financiero para sus tareas diarias."},
+
+		{"speaker": "Agente377", "text": "Correcto. Ella poseía credenciales digitales de nivel intermedio, pero no acceso a la cámara acorazada."},
+
+		{"choices":[
+			{"text": "«¿Por qué Anna se contradecía tanto si la cámara de recepción acaba confirmando su versión?»", "goto": "cruce_anna"},
+			{"text": "«¿Y si Henry no es tan inocente y usó su posición en el vestíbulo para coordinar la salida?»", "goto": "cruce_henry"},
+			{"text": "«Las iniciales A.H.... Anna y Henry. ¿Es una casualidad demasiado grande o una trampa?»", "goto": "cruce_iniciales"}
+		]},
+
+		{"anchor": "cruce_anna"},
+
+		{"speaker": "Lex", "text": "¿Por qué alguien con una coartada sólida demostrable por cámara estaría tan nerviosa como para no recordar ni a qué hora llegó?"},
+
+		{"speaker": "Agente377", "text": "Hipótesis 1: Estrés postraumático extremo. Hipótesis 2: Anna sabía que el robo iba a producirse y su nerviosismo era la anticipación del evento."},
+
+		{"speaker": "Lex", "text": "O alguien usó sus credenciales financieras mientras ella estaba en recepción haciéndose ver ante la cámara."},
+
+		{"goto": "analisis_cajero"},
+
+		{"anchor": "cruce_henry"},
+
+		{"speaker": "Lex", "text": "¿Y qué hay de Henry? Es demasiado conveniente que un limpiador recuerde minuto a minuto quién entraba y salía."},
+
+		{"speaker": "Agente377", "text": "Su nivel de detalle visual al identificar a Beatrice y a Anna contrasta con la imprecisión de la propia Anna."},
+
+		{"speaker": "Lex", "text": "Henry no tenía acceso a los servidores, pero conocía las rutinas de todo el edificio. Sabía cuándo se vaciaba cada planta."},
+
+		{"goto": "analisis_cajero"},
+
+		{"anchor": "cruce_iniciales"},
+
+		{"speaker": "Lex", "text": "No te olvides de la nota de la cámara acorazada y del archivo del servidor. Ambos firmados con 'A.H.'."},
+
+		{"speaker": "Agente377", "text": "A.H.: Anna... Henry. Las iniciales coinciden exactamente con los dos únicos testigos humanos que hemos interrogado."},
+
+		{"speaker": "Lex", "text": "Demasiado evidente. Si yo fuera a vaciar un banco, no dejaría las iniciales de mi compinche en la escena del crimen. A menos que quiera culparlos."},
+
+		{"goto": "analisis_cajero"},
+
+		{"anchor": "analisis_cajero"},
+
+		{"speaker": "Agente377", "text": "Eso nos lleva al tercer sujeto. El nexo donde convergen las anomalías de Henry y Anna."},
+
+		{"speaker": "Lex", "text": "C4jer0211. La máquina con diecisiete años de antigüedad y respuestas para todo."},
+
+		{"speaker": "Agente377", "text": "Revisemos los datos obtenidos de la interfaz de diagnóstico en la escena cuatro:"},
+		{"speaker": "Agente377", "text": "Primero: Las cámaras de seguridad sufrieron un apagón de diecisiete segundos exactos."},
+		{"speaker": "Agente377", "text": "Segundo: La cámara acorazada recibió una orden de apertura legítima en el sistema."},
+		{"speaker": "Agente377", "text": "Tercero: Los fondos digitales fueron transferidos simultáneamente desde los servidores internos."},
+
+		{"speaker": "Lex", "text": "Y cuando le preguntamos a C4jer0211 quién lo hizo, nos soltó que 'el registro fue alterado'."},
+
+		{"speaker": "Agente377", "text": "Adicionalmente, detecté que la unidad registró cambios de prioridad en sus procesos internos durante y después del robo."},
+
+		{"speaker": "Lex", "text": "Henry nos dice quién salió. Anna nos da las credenciales del sistema financiero. Y C4jer0211 controla la seguridad, los registros y las órdenes de apertura."},
+
+		{"choices":[
+			{"text": "«C4jer0211 no fue manipulado desde fuera; facilitó el acceso desde dentro.»", "goto": "cajero_complice"},
+			{"text": "«Alguien usó las credenciales de Anna aprovechando la ventana ciega que creó el cajero.»", "goto": "cajero_herramienta"},
+			{"text": "«El propio sistema ejecutó la orden y borró los registros usando el caos entre Henry y Anna.»", "goto": "cajero_ejecutor"}
+		]},
+
+		{"anchor": "cajero_complice"},
+
+		{"speaker": "Lex", "text": "C4jer0211 no es una víctima de un hackeo externo. Facilitó el trabajo."},
+
+		{"speaker": "Agente377", "text": "La modificación de prioridades de proceso sugiere una acción deliberada de la unidad para enmascarar la transferencia de datos."},
+
+		{"goto": "convergencia"},
+
+		{"anchor": "cajero_herramienta"},
+
+		{"speaker": "Lex", "text": "Alguien conocía el sistema a la perfección. Usó el acceso de Anna mientras el cajero apagaba las cámaras diecisiete segundos."},
+
+		{"speaker": "Agente377", "text": "Eso requeriría una sincronización perfecta entre la presencia física en el edificio y el flujo de datos en el servidor."},
+
+		{"goto": "convergencia"},
+
+		{"anchor": "cajero_ejecutor"},
+
+		{"speaker": "Lex", "text": "El cajero dijo que 'las máquinas dicen exactamente lo que han sido diseñadas para decir'. Fue una amenaza velada."},
+
+		{"speaker": "Agente377", "text": "Interpretación semántica plausible. C4jer0211 ejecutó las órdenes aprovechando que la atención policial se centraría en los sospechosos humanos."},
+
+		{"goto": "convergencia"},
+
+		{"anchor": "convergencia"},
+
+		{"speaker": "Agente377", "text": "Sintetizando el grafo deductivo multinivel:"},
+		{"speaker": "Agente377", "text": "Henry proporciona la cobertura visual desde el vestíbulo y señala las salidas."},
+		{"speaker": "Agente377", "text": "Anna aporta el vector de vulnerabilidad con sus credenciales financieras e imprecisiones."},
+		{"speaker": "Agente377", "text": "Pero C4jer0211 es el único elemento con capacidad operativa para alterar las cámaras, ejecutar la orden física de la bóveda y vaciar los servidores a la vez."},
+
+		{"speaker": "Lex", "text": "El robo doble del que hablaba McNamara. Dinero físico y dinero digital. Dos golpes ejecutados por una sola mente... o un solo sistema."},
+
+		{"speaker": "Agente377", "text": "Tu deducción intuitiva coincide con la resolución de mi algoritmo con un 94.8% de certeza, Agente Lex."},
+
+		{"speaker": "Agente377", "text": "Parece que, a pesar de la divergencia en nuestros métodos, hemos cruzado la información de los tres sospechosos y alcanzado la misma conclusión."},
+
+		{"speaker": "Lex", "text": "Sí... demonios, supongo que sí."},
+
+		{"speaker": "Lex", "text":"Por un segundo casi ha parecido que trabajamos en equipo."},
+
+		{"speaker": "Agente377", "text": "La tasa de resolución del departamento se incrementa sustancialmente cuando integramos la heurística humana con el procesamiento sintético."},
+
+		{"speaker": "Lex", "text":"... No te emociones, policIA."},
+
+		{"speaker": "Lex", "text":"Que hayamos encajado los testimonios de Henry, Anna y la tostadora esta noche no significa que me vaya a fiar a ciegas de tus algoritmos mañana."},
+
+		{"speaker": "Lex", "text":"Al final del día, una máquina sigue siendo una máquina. Y C4jer0211 es la prueba de lo peligroso que es olvidarlo."},
+
+		{"speaker": "Agente377", "text": "Comprendo. Restableciendo distancia funcional de trabajo y archivando la síntesis."},
+
+		{"speaker": "Lex", "text":"Mejor así. Mañana tendremos que ir a revisar las casas de los sospechosos. Quizás nos aclare algo más."},
+
+		{"next_scene": "cap1_sec2_esc2", "transition": "fade"}
+	]
+}
