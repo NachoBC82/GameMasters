@@ -33,15 +33,15 @@ func getHotspotCount(node):
 	return count
 
 func _clear_current_location() -> void:
-	if _location_instance:
+	if _location_instance and is_instance_valid(_location_instance):
+		current_location.remove_child(_location_instance)
 		_location_instance.queue_free()
 		_location_instance = null
-			
 
 func _connect_dynamic_hotspots() -> void:
 	# Busca los hotspots dentro del nodo de la ubicación actual
-	for child in current_location.get_child(0).get_children():
-		if child is Area2D:						
+	for child in _location_instance.get_children():
+		if child is Area2D:
 			if not child.hotspot_triggred.is_connected(_on_hotspot_clicked):
 				child.hotspot_triggred.connect(_on_hotspot_clicked)
 
